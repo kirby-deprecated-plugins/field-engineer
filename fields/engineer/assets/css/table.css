@@ -1,0 +1,66 @@
+.engineer-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.engineer-table > thead > tr > th {
+	padding: .5em;
+	font-weight: 400;
+	color: #777;
+	font-style: italic;
+	text-align: left;
+}
+
+.engineer-table > tbody > tr > td {
+	vertical-align: top;
+}
+
+.engineer-table > tbody> tr > td:last-child {
+	width: 1px;
+}
+
+.engineer-table .engineer-item {
+	padding: .5em;
+}
+
+.engineer-table .engineer-item > .field {
+	padding-left: 0 !important;
+}
+
+.engineer-table > tbody > tr > td:first-child .engineer-item,
+.engineer-table > tbody > tr > th:first-child {
+	padding-left: 0;
+}
+
+.engineer-table > tbody > tr > td:last-child .engineer-item,
+.engineer-table > tbody > tr > th:last-child {
+	padding-right: 0;
+}
+
+/* Field */
+
+.engineer-table .field {
+	margin-bottom: 0 !important;
+}
+
+.engineer-table ul.field-grid {
+	margin-left: 0;
+}
+
+.engineer-table ul.field-grid li {
+	padding-left: 1em;
+}
+
+.engineer-table ul.field-grid li:first-child {
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
+
+.engineer-table .engineer-delete-button {
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	line-height: 2.5em;
+	height: 2.5em;
+}

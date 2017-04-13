@@ -16,13 +16,13 @@
 			});
 
 			// Add event
-			field.find('.table-add-button').click(function(e) {
+			field.find('.table-add-button, .engineer-add-button-empty').click(function(e) {
 				EngineerTableAdd.add(field);
 			});
 
 			// Delete event
 			field.on('click', '.engineer-delete-button', function() {
-				$(this).parent().parent().remove();
+				$(this).closest('.engineer-row').remove();
 				EngineerTableRender.render(field);
 			});
 

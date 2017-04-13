@@ -1,0 +1,29 @@
+.engineer-items .engineer-item > .field {
+	margin-bottom: .5em !important;
+	padding-left: 0 !important;
+}
+
+.engineer-items .engineer-field:last-child .field {
+	margin-bottom: 0 !important;
+}
+
+.engineer-items > [data-engineer-row],
+.engineer-items > .engineer-hidden-row {
+	margin-bottom: .5em;
+	display: flex;
+}
+
+.engineer-items .engineer-fields {
+	flex: 1;
+	border: 2px solid #ddd;
+	border-right: none;
+	padding: 1em;
+}
+
+
+.engineer-items .engineer-delete-button {
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}

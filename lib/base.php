@@ -2,6 +2,22 @@
 namespace Field\Engineer;
 
 class Base {
+	public function prefix($subfield) {
+		$type_prefix = 'engineer';
+		switch($subfield['type']) {
+			case 'image':
+			case 'select':
+			case 'checkboxes':
+			case 'page':
+			case 'user':
+			case 'radio':
+			case 'tags':
+				$subfield['type'] = $type_prefix . $subfield['type'];
+				break;
+		};
+		return $subfield;
+	}
+
 	public function removeLabel($subfield) {
 		$subfield['label'] = '';
 		return $subfield;
@@ -41,6 +57,7 @@ class Base {
 		$this->value = $this->setValue($key, $rows, $i);
 		$this->value = $this->fixBool($this->value);
 
+		$subfield = $this->prefix($subfield);
 		$subfield = $this->removeLabel($subfield);
 		$subfield = $this->fixTextarea($subfield);
 

@@ -10,7 +10,7 @@ var EngineerTableRender = (function () {
 			var row_index = $(this).attr('data-engineer-row');
 			output += "-\n";
 
-			$(this).find('td').each(function(item_index) {
+			$(this).find('.engineer-field').each(function(item_index) {
 				var name = $(this).attr('data-name');
 				var selector_key = 'engineer_' + instance_name + '_' + row_index + '_' + name;
 				var selector_single = '[name="' + selector_key + '"]:not(label)';
@@ -37,11 +37,11 @@ var EngineerTableRender = (function () {
 								}
 								break;
 							default:
-								output += fn.input(subfield, name);
+								output += fn.input(subfield, name, is_single);
 						}
 						break;
 					case 'SELECT':
-						output += fn.input(subfield, name);
+						output += fn.select(subfield, name);
 						break;
 				}
 			});
@@ -65,6 +65,17 @@ var EngineerTableRender = (function () {
 	};
 
 	fn.input = function(subfield, name) {
+		var value = '';
+
+		subfield.each(function( index ) {
+			value += $(this).val() + ' ';
+		});
+		value = value.slice(0, -1);
+		value = value.replace(/"/g, '\\"');
+		return '  ' + name + ': "' + value + '"' + "\n";
+	};
+
+	fn.select = function(subfield, name) {
 		var value = subfield.val();
 		value = value.replace(/"/g, '\\"');
 		return '  ' + name + ': "' + value + '"' + "\n";
@@ -88,10 +99,9 @@ var EngineerTableRender = (function () {
 				if(value == 'on') {
 					value = 'true';
 				}
-				if(value == '') {
-					value = 'false';
-				}
-				out += '  ' + name + ": " + value + "\n";
+				out += '  ' + name + ': ' + value + "\n";
+			} else {
+				out += '  ' + name + ": false\n";
 			}
 		});
 		return out;
