@@ -1,0 +1,8 @@
+{
+  "name": "kirby-table-field",
+  "description": "Table field for Kirby CMS panel.",
+  "author": "Jens Törnell <jens.tornell@gmail.com>",
+  "version": "0.1",
+  "type": "kirby-plugin",
+  "license": "MIT"
+}
