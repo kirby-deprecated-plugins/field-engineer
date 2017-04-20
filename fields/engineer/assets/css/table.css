@@ -13,33 +13,21 @@
 
 .engineer-table > tbody > tr > td {
 	vertical-align: top;
-}
-
-.engineer-table > tbody> tr > td:last-child {
-	width: 1px;
-}
-
-.engineer-table .engineer-item {
+	border: 1px solid #ddd;
+	background: #eee;
 	padding: .5em;
 }
 
-.engineer-table .engineer-item > .field {
-	padding-left: 0 !important;
-}
-
-.engineer-table > tbody > tr > td:first-child .engineer-item,
-.engineer-table > tbody > tr > th:first-child {
-	padding-left: 0;
-}
-
-.engineer-table > tbody > tr > td:last-child .engineer-item,
-.engineer-table > tbody > tr > th:last-child {
-	padding-right: 0;
+.engineer-table > tbody> tr > td:first-child,
+.engineer-table > tbody> tr > td:last-child {
+	width: 1px;
 }
 
 /* Field */
 
 .engineer-table .field {
+	margin-bottom: 0 !important;
+	padding-left: 0 !important;
 	margin-bottom: 0 !important;
 }
 
@@ -57,10 +45,34 @@
 }
 
 .engineer-table .engineer-delete-button {
+	text-align: center;
+	cursor: default;
+	padding: 0 1em;
+	line-height: 2.5em;
+	background: #ddd;
+
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 2.5em;
+}
+
+.engineer-table .engineer-delete-button:hover {
+	background: #b3000a;
+	color: #fff;
+}
+
+.engineer-table .engineer-sort-handle {
 	height: auto;
 	justify-content: center;
 	align-items: center;
 	display: flex;
 	line-height: 2.5em;
 	height: 2.5em;
+	cursor: pointer;
+}
+
+.engineer-table .ui-sortable-helper td {
+	background: #ddd !important;
 }

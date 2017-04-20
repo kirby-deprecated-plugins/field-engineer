@@ -11,19 +11,44 @@
 .engineer-items > .engineer-hidden-row {
 	margin-bottom: .5em;
 	display: flex;
+	border: 1px solid #ddd;
 }
 
 .engineer-items .engineer-fields {
 	flex: 1;
-	border: 2px solid #ddd;
 	border-right: none;
-	padding: 1em;
+	padding-top: 1.5em;
 }
 
 
+.engineer-items .engineer-delete-button,
+.engineer-items .engineer-sort-handle {
+	margin: .5em;
+	text-align: center;
+	cursor: default;
+	padding: 0 1em;
+	height: 2.5em;
+	line-height: 2.5em;
+	cursor: pointer;
+}
+
 .engineer-items .engineer-delete-button {
-	height: auto;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+	background: #ddd;
+}
+
+.engineer-items .engineer-delete-button:hover {
+	background: #b3000a;
+	color: #fff;
+}
+
+.engineer-items .engineer-row {
+	background: #eee;
+}
+
+.engineer-items .ui-sortable-helper {
+	background: #ddd !important;
+}
+
+.engineer-items .field {
+	float: left;
 }

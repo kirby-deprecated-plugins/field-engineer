@@ -23,7 +23,8 @@ class ItemsRow extends Base {
 
 	public function setForm($field, $key, $i, $rows, $subfield) {
 		$prepare = $this->prepareForm($field, $key, $i, $rows, $subfield);
-		$form = (string)new \EngineerForm($this->input, array($this->name => $this->value));
-		return $form;
+		$form = new \EngineerForm($this->input, array($this->name => $this->value));
+		$html = $this->manipulate($form, $key);
+		return $html;
 	}
 }

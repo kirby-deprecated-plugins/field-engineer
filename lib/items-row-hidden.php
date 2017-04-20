@@ -23,7 +23,8 @@ class ItemsRowHidden extends Base {
 
 	public function setForm($field, $key, $i, $rows, $subfield) {
 		$prepare = $this->prepareForm($field, $key, $i, $rows, $subfield);
-		$form = (string)new \EngineerForm($this->input);
-		return $form;
+		$form = new \EngineerForm($this->input);
+		$html = $this->manipulate($form, $key);
+		return $html;
 	}
 }

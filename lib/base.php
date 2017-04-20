@@ -1,5 +1,6 @@
 <?php
 namespace Field\Engineer;
+use yaml;
 
 class Base {
 	public function prefix($subfield) {
@@ -47,6 +48,14 @@ class Base {
 	public function setInput($name, $subfield) {
 		$input = array($name => $subfield);
 		return $input;
+	}
+
+	public function manipulate($form, $key) {
+		$type = $form->fields->{$this->name}->type;
+
+		$type = str_replace('engineer', '', $type);
+		$html = str_replace('class="field ', 'data-type="' . $type . '" data-name="' . $key . '" class="field engineer-field ', $form);
+		return $html;
 	}
 
 	public function prepareForm($field, $key, $i, $rows, $subfield) {

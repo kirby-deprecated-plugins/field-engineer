@@ -15,11 +15,16 @@ class EngineerForm extends Form {
 			$this->append($this->message);
 		}
 
-		$fieldset = new Brick('div');
-		foreach($this->fields() as $field) {
-			$this->append($field);
+		$html = '';
+		foreach($this->fields() as $key => $field) {
+			$html .= $field;
+			//$html = str_replace('class="field ', 'data-type="' . $field->type . '" data-name="' . $key . '" class="field engineer-field ', $html);
 		}
-		$this->addClass('engineer-item');
-		return $this;
+
+		return $html;
+	}
+
+	public function __toString() {
+		return $this->toHTML();
 	}
 }

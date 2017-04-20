@@ -4,7 +4,8 @@ class EngineerField extends BaseField {
 		'js' => array(
 			'script.js',
 			'add.js',
-			'render.js'
+			'render.js',
+			'sort.js',
 		),
 		'css' => array(
 			'style.css',
@@ -68,6 +69,9 @@ class EngineerField extends BaseField {
 		$element = parent::element();
 		$element->data('field', 'engineer');
 		$element->data('name', $this->name);
+		if(isset($this->limit)) {
+			$element->data('limit', $this->limit);
+		}
 		return $element;
 	}
 }

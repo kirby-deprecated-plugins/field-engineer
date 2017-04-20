@@ -1,5 +1,10 @@
 <div class="engineer">
 	<?php if(isset($engineer_field['fields'])) : ?>
+		<div class="engineer-empty structure-empty">
+			<?php _l('fields.structure.empty') ?>
+			<span class="engineer-add-button-empty"><?php _l('fields.structure.add.first') ?></span>
+		</div>
+		
 		<div class="engineer-data">
 			<table class="engineer-table">
 				<thead>
@@ -15,9 +20,14 @@
 				</thead>
 				<tbody>
 					<tr class="engineer-row engineer-hidden-row<?= e(!c::get('field.engineer.debug', false), ' hidden'); ?>">
+						<td>
+							<div class="engineer-sort-handle">
+								<i class="icon fa fa-arrows-alt"></i>
+							</div>
+						</td>
 						<?php $i = null; $rows = null; ?>
 						<?php foreach($engineer_field['fields'] as $key => $subfield) : ?>
-							<td class="engineer-field" data-type="<?= $subfield['type']; ?>" data-name="<?= $key; ?>">
+							<td class="engineer-field">
 								<?= $field->tableRowHidden()->setForm($field, $key, $i, $rows, $subfield); ?>
 							</td>
 						<?php endforeach; ?>
@@ -32,6 +42,11 @@
 					<?php $i = 0 ; ?>
 					<?php foreach($rows as $index => $row) : ?>
 						<tr class="engineer-row" data-engineer-row="<?= $i; ?>">
+							<td>
+								<div class="engineer-sort-handle">
+									<i class="icon fa fa-arrows-alt"></i>
+								</div>
+							</td>
 							<?php foreach($engineer_field['fields'] as $key => $subfield) : ?>
 								<td class="engineer-field" data-type="<?= $subfield['type']; ?>" data-name="<?= $key; ?>">
 									<?= $field->tableRow()->setForm($field, $key, $i, $rows, $subfield); ?>

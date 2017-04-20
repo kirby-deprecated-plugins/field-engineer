@@ -10,7 +10,7 @@ var EngineerTableRender = (function () {
 			var row_index = $(this).attr('data-engineer-row');
 			output += "-\n";
 
-			$(this).find('.engineer-field').each(function(item_index) {
+			$(this).find('.field.engineer-field').each(function(item_index) {
 				var name = $(this).attr('data-name');
 				var selector_key = 'engineer_' + instance_name + '_' + row_index + '_' + name;
 				var selector_single = '[name="' + selector_key + '"]:not(label)';

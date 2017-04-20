@@ -9,12 +9,14 @@ var EngineerTableAdd = (function () {
 		field.find('.engineer-items').append('<div class="engineer-row" data-engineer-row="' + time + '">' + hidden_html + '</div>');
 		EngineerTableRender.render(field);
 
-		$('[data-field="urlfield"]').removeData('urlfield').off('click').urlfield();
-		$('[data-field="date"]').removeData('date').off('change').date();
-		$('[data-field="imagefield"]').removeData('imagefield').off('click').imagefield();
-		$('[data-field="autocomplete"]').removeData('autocomplete').off('keydown keyup').autocomplete();
+		var item = field.find('[data-engineer-row]').last();
 
-		//fn.addTags(field);
+		item.find('[data-field="urlfield"]').removeData('urlfield').off('click').urlfield();
+		item.find('[data-field="date"]').removeData('date').off('change').date();
+		item.find('[data-field="imagefield"]').removeData('imagefield').off('click').imagefield();
+		item.find('[data-field="autocomplete"]').removeData('autocomplete').off('keydown keyup').autocomplete();
+
+		engineerEmpty(field);
 	};
 
 	fn.addTags = function(field) {
