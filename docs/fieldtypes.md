@@ -23,21 +23,17 @@ This plugin works with most Kirbys built in fields. It will even work with plugi
 - [Url](https://getkirby.com/docs/cheatsheet/panel-fields/url)
 - [User](https://getkirby.com/docs/cheatsheet/panel-fields/user)
 
-### Supported fields
-
 `style: items`
 
 - [Line](https://getkirby.com/docs/cheatsheet/panel-fields/line)
 
 ### Partly of supported
 
-When adding rows, the javascript bound to the new items does not. If you save first, you can use them as expected. 
+When adding rows, the javascript is not aware of that the DOM has changed. If you save first, you can use them as expected.
 
 - [Tags](https://getkirby.com/docs/cheatsheet/panel-fields/tags)
 
 ### Unsupported fields
-
-Most of the unsupported fields are not supported, simply because they don't fit the tabular format.
 
 - [Hidden](https://getkirby.com/docs/cheatsheet/panel-fields/hidden)
 - [Headline](https://getkirby.com/docs/cheatsheet/panel-fields/headline)

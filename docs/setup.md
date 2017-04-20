@@ -2,7 +2,13 @@
 
 ### Blueprint
 
-To make it work as expected, add the following code to your blueprint:
+It works exactly like the structure field. You can read about it here:
+
+https://getkirby.com/docs/cheatsheet/panel-fields/structure
+
+The only difference is the field `type` that needs to be `engineer`.
+
+**Example:**
 
 ```text
 fields:
@@ -21,4 +27,4 @@ fields:
         type: date
 ```
 
-Also read about [fieldtypes](fieldtypes) and [blueprint](blueprint).
+Also read about [fieldtypes](fieldtypes.md) and [blueprint](blueprint.md).

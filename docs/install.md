@@ -8,12 +8,12 @@ If you are using the [Kirby CLI](https://github.com/getkirby/cli) you can instal
 
 ```text
 $ cd path/to/kirby
-$ kirby plugin:install jenstornell/engineer-field
+$ kirby plugin:install jenstornell/field-engineer
 ```
 
 ## 2. Clone or download
 
-1. [Clone](https://github.com/jenstornell/kirby-table-field.git) or [download](https://github.com/jenstornell/field-engineer/archive/master.zip)  this repository.
+1. [Clone](https://github.com/jenstornell/field-engineer.git) or [download](https://github.com/jenstornell/field-engineer/archive/master.zip)  this repository.
 2. Unzip the archive if needed and rename the folder to `field-engineer`.
 
 **Make sure that the plugin folder structure looks like this:**
@@ -28,5 +28,5 @@ If you know your way around Git, you can download this plugin as a submodule:
 
 ```text
 $ cd path/to/kirby
-$ git submodule add https://github.com/jenstornell/engineer-field site/plugins/engineer-field
+$ git submodule add https://github.com/jenstornell/field-engineer site/plugins/field-engineer
 ```
