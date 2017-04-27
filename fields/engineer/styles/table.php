@@ -9,6 +9,7 @@
 			<table class="engineer-table">
 				<thead>
 					<tr>
+						<th>&nbsp;</th>					
 						<?php foreach($engineer_field['fields'] as $key => $item) : ?>
 							<?php $label = (isset($item['label']) && !empty($item['label'])) ? $item['label'] : '&nbsp;'; ?>
 							<th>

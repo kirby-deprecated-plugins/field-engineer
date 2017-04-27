@@ -15,6 +15,7 @@ var EngineerTableAdd = (function () {
 		item.find('[data-field="date"]').removeData('date').off('change').date();
 		item.find('[data-field="imagefield"]').removeData('imagefield').off('click').imagefield();
 		item.find('[data-field="autocomplete"]').removeData('autocomplete').off('keydown keyup').autocomplete();
+		item.find('[data-field="editor"]').removeData('editor').off('keydown click').editor();
 
 		engineerEmpty(field);
 	};

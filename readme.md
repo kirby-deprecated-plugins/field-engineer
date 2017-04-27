@@ -1,6 +1,6 @@
 # Kirby Engineer Field
 
-*Version 0.2 beta* - ***[Changelog](docs/changelog.md)***
+*Version 0.3 beta* - ***[Changelog](docs/changelog.md)***
 
 *Free during the beta period*
 

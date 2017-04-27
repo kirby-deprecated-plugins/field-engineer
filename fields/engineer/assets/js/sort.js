@@ -3,6 +3,7 @@ var EngineerSort = (function () {
 
 	fn.init = function(field) {
 		var rows  = field.find('.engineer-table tbody');
+		var firstSort = true;
 		rows.sortable({
 			helper: function(e, ui) {
 				ui.children().each(function() {
@@ -14,15 +15,28 @@ var EngineerSort = (function () {
 			handle: '.engineer-sort-handle',
 			update: function() {
 				EngineerTableRender.render(field);
+			},
+			start: function(e, ui) {
+				if(firstSort) {
+					items.sortable('refreshPositions');
+					firstSort = false;
+				}
 			}
 		});
 
 		var items  = field.find('.engineer-items');
+		var firstSort = true;
 		items.sortable({
 			items: '.engineer-row:not(.engineer-hidden-row)',
 			handle: '.engineer-sort-handle',
 			update: function() {
 				EngineerTableRender.render(field);
+			},
+			start: function(e, ui) {
+				if(firstSort) {
+					items.sortable('refreshPositions');
+					firstSort = false;
+				}
 			}
 		});
 	};
