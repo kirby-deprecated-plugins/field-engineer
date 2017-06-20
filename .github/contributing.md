@@ -1,12 +1,10 @@
 # How to contribute
 
-## Buy licenses
-
-To keep this project going, one of the best ways to contribute is to buy licenses.
+Issue reports and pull requests are very valuable to improve this project.
 
 ## Issue reporting
 
-If you find something that does not work, you can add a new issue. Before you do so, make sure there is no issue of the same problem already.
+If you find something that does not work, add a new issue. Explain the problem as well as you can. Make sure the issue does not already exists. Provide the blueprint code if needed.
 
 ## Pull requests
 

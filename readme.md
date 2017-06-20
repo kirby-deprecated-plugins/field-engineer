@@ -1,6 +1,8 @@
 # Kirby Engineer Field
 
-[![Version rc-0.4](https://img.shields.io/badge/version-rc--0.4-blue.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/changelog.md) [<img src="https://img.shields.io/badge/license-commercial-red.svg" alt="Commercial license">](https://github.com/jenstornell/field-engineer/blob/development/docs/license.md)
+[![Version rc-0.4](https://img.shields.io/badge/version-rc--0.4-blue.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/license.md)
+
+***Note:*** *This is a commercial plugin. Read more about [how to purchase](#purchase).*
 
 A [Kirby CMS](https://getkirby.com) field for complex field structures.
 
@@ -16,7 +18,7 @@ A [Kirby CMS](https://getkirby.com) field for complex field structures.
 
 You can have pretty much any field structure you want. Also see the [blueprint](docs/examples.md) for this screenshot.
 
-[![Screenshot](docs/hero.png)](docs/hero.png)
+[![Screenshot](docs/hero.png)](https://raw.githubusercontent.com/jenstornell/field-engineer/development/docs/hero.png)
 
 [See more screenshots](docs/screenshots.md)
 
@@ -50,11 +52,9 @@ Be sure to try before you buy. Refunds are not supported. Read more in the [lice
 
 [![Pay now](https://www.paypalobjects.com/en_US/SE/i/btn/btn_paynowCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W68WGMJVFLTFU)
 
-**Price:** 50 EUR (on each project)
+**Price:** 50 EUR (on each project/domain)
 
 ## Credits
 
 - [Jens Törnell](https://github.com/jenstornell)
-- [Sonja Broda](https://github.com/texnixe) - For the great forum support
-- [Lukas Bestle](https://github.com/lukasbestle) - For the great forum support and Kirby development
-- [Bastian Allgeier](https://github.com/bastianallgeier) - For building Kirby which makes this plugin possible
+- The Kirby crew for all the great support!
