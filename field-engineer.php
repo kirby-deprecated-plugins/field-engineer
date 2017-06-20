@@ -1,25 +1,10 @@
 <?php
 if(class_exists('Panel') && site()->user()) {
-	include __DIR__ . DS . 'lib' . DS . 'form.php';
-	include __DIR__ . DS . 'lib' . DS . 'base.php';
-	include __DIR__ . DS . 'lib' . DS . 'table-row-hidden.php';
-	include __DIR__ . DS . 'lib' . DS . 'items-row-hidden.php';
-	include __DIR__ . DS . 'lib' . DS . 'table-row.php';
-	include __DIR__ . DS . 'lib' . DS . 'items-row.php';
-
-	$prefix = 'engineer';
-	$fields = array(
-		'',
-		'image',
-		'select',
-		'checkboxes',
-		'page',
-		'user',
-		'radio',
-		'tags',
-	);
-
-	foreach($fields as $field) {
-		$kirby->set('field', $prefix . $field, __DIR__ . DS . 'fields' . DS . $prefix . $field);
-	}
+	require_once __DIR__ . DS . 'lib' . DS . 'form.php';
+	require_once __DIR__ . DS . 'lib' . DS . 'field.php';
+	require_once __DIR__ . DS . 'lib' . DS . 'tpl.php';
+	require_once __DIR__ . DS . 'lib' . DS . 'presentation.php';
+	require_once __DIR__ . DS . 'lib' . DS . 'outline.php';
+	
+	$kirby->set('field', 'engineer', __DIR__ . DS . 'fields' . DS . 'engineer');
 }

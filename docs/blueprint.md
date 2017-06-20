@@ -1,45 +1,112 @@
 # Blueprint
 
-## Engineer options
+Most of the engineer options are the same as the [structure field](https://getkirby.com/docs/cheatsheet/panel-fields/structure).
 
-Most of the engineer options are the same as the structure field.
+## Engineer field
 
-https://getkirby.com/docs/cheatsheet/panel-fields/structure
+### Basic example
 
-### Works
+A basic example with two fields, one text field and one image field. 
 
-- label
-- style
+**Blueprint**
 
-### Does not work (yet)
+```text
+fields:
+  my_engineer:
+    type: engineer
+    fields:
+      first:
+        label: Text
+        type: text
+      second:
+        label: Image
+        type: image
+```
 
-- default (not at the moment)
-- readonly (planned)
-- limit (planned)
-- modalsize (Engineer does not need a modal)
+**Content**
 
-## Subfield options
+```text
+My_engineer:
 
-Most of the subfield options should work out of the box.
+-
+  first: "My first text"
+  second: "flowers.jpg"
+-
+  first: "Another text"
+  second: "nature.jpg"
+```
 
-https://getkirby.com/docs/panel/blueprints/form-fields
+### Advanced example
 
-### Works
+A more advanced example where multiple fieldsets are used. Also it uses nested engineer fields.
 
-- [Default](https://getkirby.com/docs/panel/blueprints/form-fields#default-values)
-- [Placeholder](https://getkirby.com/docs/panel/blueprints/form-fields#placeholders)
-- [Readonly](https://getkirby.com/docs/panel/blueprints/form-fields#readonly-fields)
-- [Help](https://getkirby.com/docs/panel/blueprints/form-fields#field-instructions)
-- [Icon](https://getkirby.com/docs/panel/blueprints/form-fields#custom-icons)
-- Label
+**Blueprint**
 
-### Works in some cases
+```text
+fields:
+  my_engineer:
+    type: engineer
+    fieldsets:
+      set1:
+        fields:
+          first:
+            label: Engineer
+            type: engineer
+            fields:
+              my_text:
+                type: text
+              my_image:
+                type: image
+          second:
+            label: Image
+            type: image
+      set2:
+        fields:
+          first:
+            type: text
+          second:
+            type: toggle
+```
 
-- [Width](https://getkirby.com/docs/panel/blueprints/form-fields#creating-grids) (does only work with style: items)
-- [Required](https://getkirby.com/docs/panel/blueprints/form-fields#required-fields) (if it's html5 validation, it will work)
+**Content**
 
-### Does not work
+```text
+My_engineer:
 
-- [Validate min/max](https://getkirby.com/docs/panel/blueprints/form-fields#validation)
-- [Translations](https://getkirby.com/docs/panel/blueprints/form-fields#translating-form-fields) - Not tested
-- [Translate](https://getkirby.com/docs/panel/blueprints/form-fields#prevent-field-values-in-non-default-languages) - Not tested
+-
+  _fieldset: set1
+  second: "flowers.jpg"
+  first:
+   -
+    my_text: "First row inside"
+    my_image: "nature.jpg"
+   -
+    my_text: "Second row inside"
+    my_image: "nature.jpg"
+-
+  _fieldset: set2
+  first: "A set with a toggle field"
+  second: 'false'
+```
+
+### Engineer field options
+
+**label**
+
+It's optional but you can give the Engineer field a label if you like.
+
+**type**
+
+The `type` option needs to be set to `engineer`.
+
+**fields**
+
+It works very similar to the [structure field](https://getkirby.com/docs/cheatsheet/panel-fields/structure). The best way to understand it is to look at the basic example.
+
+**fieldsets**
+
+Instead of fields you can use fieldsets. Then you can choose which set to use. To learn it, see the advanced example.
+
+---
+
+[Read about supported fields](fields.md)

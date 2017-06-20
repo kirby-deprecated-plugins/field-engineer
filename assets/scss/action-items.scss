@@ -1,0 +1,39 @@
+.egr-actions {
+	width: calc(100% + 1.5em);
+	display: none;
+
+	&:after {
+		clear: both;
+		display: table;
+		content: '';
+	}
+
+	> * {
+		height: 2.5em;
+		line-height: 2.5em;
+		cursor: pointer;
+		padding-right: 1.5em;
+		padding-left: 1.5em;
+		user-select: none;
+	}
+
+	span {
+		color: #777;
+	}
+
+	> *:hover span {
+		color: #000;
+	}
+
+	.egr-delete,
+	.egr-clone {
+		float: left;
+		border-right: 1px solid #ddd;
+		border-image: linear-gradient(to top, #ccc, rgba(0, 0, 0, 0)) 1 100%;
+	}
+
+	.egr-delete:hover,
+	.egr-delete:hover span {
+		color: #b3000a;
+	}
+}

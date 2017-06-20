@@ -1,0 +1,26 @@
+.egr-dropdown {
+	position: absolute;
+	background: #000;
+	border-radius: 4px;
+	right: 0;
+	z-index: 10000;
+	display: none;
+	margin-top: .4em;
+
+	&:before {
+		content: '';
+		border-left: .4em solid transparent;
+		border-right: .4em solid transparent;
+		border-bottom: .4em solid #000;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		margin-top: -.3em;
+	}
+}
+.egr-dropdown-active .egr-dropdown {
+	display: block;
+}
+.egr-dropdown-active .egr-add-button .icon {
+	transform: rotateX(180deg);
+}

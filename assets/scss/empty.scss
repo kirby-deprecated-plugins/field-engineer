@@ -1,0 +1,17 @@
+.egr-empty {
+	padding: 1.5em;
+	background: #ddd;
+	display: none;
+
+	.egr-add-button {
+		border-bottom: 2px solid #aaa;
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+
+		.egr-dropdown {
+			right: auto;
+			margin-top: .7em;
+		}
+	}
+}

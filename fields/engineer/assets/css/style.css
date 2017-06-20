@@ -1,48 +1,170 @@
-.engineer-output {
-	margin-top: .5em;
-	width: 100%;
-	height: 200px;
-	padding: .5em;
-	border: 2px solid #ddd;
-}
+.egr {
+  margin-left: -1.5em;
+  margin-bottom: -1.5em; }
 
-.engineer-hidden-row {
-	opacity: .5;
-}
+.egr-row {
+  margin-left: 1.5em;
+  width: calc(100% - 1.5em);
+  padding-bottom: 1.5em; }
 
+.egr-fieldsets {
+  position: relative; }
 
-.engineer-button-wrap {
-	text-align: right;
-	cursor: pointer;
-	margin-top: .5em;
-}
+.egr-fieldset {
+  padding-top: 1em;
+  padding-right: 1.5em;
+  border: 2px solid #ddd;
+  margin-bottom: -2px;
+  background: #fff;
+  position: relative; }
 
-.engineer-add-button-empty {
-	border-bottom: 2px solid #aaa;
-	margin-left: .5em;
-	cursor: pointer;
-}
+.egr-row-blueprint .egr-fieldset {
+  opacity: .5; }
 
-.engineer .field-with-headline:first-child {
-	padding-top: 3em;
-}
+.egr-even > .egr-fieldsets > .egr-fieldset {
+  background: #eee; }
 
-.engineer .field-with-line {
-	margin-top: 1.5em !important;
-}
+.egr-outline {
+  display: none; }
 
-.engineer-empty {
-	display: none;
-}
+.egr-actions {
+  width: calc(100% + 1.5em);
+  display: none; }
+  .egr-actions:after {
+    clear: both;
+    display: table;
+    content: ''; }
+  .egr-actions > * {
+    height: 2.5em;
+    line-height: 2.5em;
+    cursor: pointer;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    user-select: none; }
+  .egr-actions span {
+    color: #777; }
+  .egr-actions > *:hover span {
+    color: #000; }
+  .egr-actions .egr-delete,
+  .egr-actions .egr-clone {
+    float: left;
+    border-right: 1px solid #ddd;
+    border-image: linear-gradient(to top, #ccc, transparent) 1 100%; }
+  .egr-actions .egr-delete:hover,
+  .egr-actions .egr-delete:hover span {
+    color: #b3000a; }
 
-.engineer-hide {
-	display: none;
-}
+.egr-row[data-count="0"] > .egr-empty {
+  display: block; }
 
-/*.engineer-show {
-	display: block;
-}
+.egr-row[data-count="0"] > .egr-row-actions {
+  display: none; }
 
-.engineer-show-table {
-	display: table;
-}*/
+.egr-dropdown-active .egr-add-button:before {
+  display: block; }
+
+.egr-dropdown {
+  position: absolute;
+  background: #000;
+  border-radius: 4px;
+  right: 0;
+  z-index: 10000;
+  display: none;
+  margin-top: .4em; }
+  .egr-dropdown:before {
+    content: '';
+    border-left: .4em solid transparent;
+    border-right: .4em solid transparent;
+    border-bottom: .4em solid #000;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-top: -.3em; }
+
+.egr-dropdown-active .egr-dropdown {
+  display: block; }
+
+.egr-dropdown-active .egr-add-button .icon {
+  transform: rotateX(180deg); }
+
+.egr-empty {
+  padding: 1.5em;
+  background: #ddd;
+  display: none; }
+  .egr-empty .egr-add-button {
+    border-bottom: 2px solid #aaa;
+    cursor: pointer;
+    position: relative;
+    display: inline-block; }
+    .egr-empty .egr-add-button .egr-dropdown {
+      right: auto;
+      margin-top: .7em; }
+
+.egr-output {
+  margin-left: 1.5em;
+  width: calc(100% - 1.5em);
+  padding-bottom: 1.5em;
+  display: none; }
+  .egr-output textarea {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #ddd;
+    padding: .5em;
+    font-size: .9em;
+    outline: none; }
+
+.egr .ui-sortable-helper {
+  border-bottom: 2px solid #ddd; }
+
+.egr-sorting {
+  border-left: 1px solid #ddd;
+  border-image: linear-gradient(to top, #ccc, transparent) 1 100%;
+  float: right; }
+
+.egr-presentation .egr-fieldset:first-child > .egr-actions > .egr-arrow-up {
+  display: none; }
+
+.egr-presentation .egr-fieldset:last-child > .egr-actions > .egr-arrow-down {
+  display: none; }
+
+.egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-arrow-up,
+.egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-arrow-down,
+.egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-sorting {
+  display: none; }
+
+.egr-row-actions {
+  margin-top: .5em; }
+  .egr-row-actions:after {
+    clear: both;
+    content: '';
+    display: table; }
+
+.egr-add-button {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  user-select: none; }
+  .egr-add-button span {
+    color: #777; }
+  .egr-add-button:hover span {
+    color: #000; }
+
+.egr-add {
+  float: right; }
+
+.egr-add-select {
+  padding: .75em 1.5em .75em 1.5em;
+  color: #fff;
+  border-bottom: 1px solid #222;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none; }
+  .egr-add-select:hover {
+    color: #999; }
+  .egr-add-select:last-child {
+    border-bottom: 0; }
+
+.egr-dropdown-active .egr-add-button:before {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
