@@ -1,6 +1,6 @@
 # Kirby Engineer Field
 
-![Release: v0.4](https://img.shields.io/badge/version-rc--0.4-blue.svg?link=https://github.com/jenstornell/field-engineer/blob/development/docs/changelog.md&link=https://github.com/jenstornell/field-engineer/blob/development/docs/changelog.md) ![License: commercial](https://img.shields.io/badge/license-commercial-red.svg?link=https://github.com/jenstornell/field-engineer/blob/development/docs/license.md&link=https://github.com/jenstornell/field-engineer/blob/development/docs/license.md)
+[![Release: v0.4](https://img.shields.io/badge/version-rc--0.4-blue.svg)](link=https://github.com/jenstornell/field-engineer/blob/development/docs/changelog.md) [![License: commercial](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/license.md)
 
 A [Kirby CMS](https://getkirby.com) field for complex field structures.
 
@@ -23,17 +23,17 @@ You can have pretty much any field structure you want. Also see the [blueprint](
 ## Table of contents
 
 1. **Get started**
-  1. [Install](docs/install.md)
-  1. [Blueprint](docs/blueprint.md)
-  1. [Usage](docs/usage.md)
-  1. [Templates and snippets](docs/blueprint.md)
+   1. [Install](docs/install.md)
+   1. [Blueprint](docs/blueprint.md)
+   1. [Usage](docs/usage.md)
+   1. [Templates and snippets](docs/blueprint.md)
 1. **More**
-  - [Supported fields](docs/fields.md)
-  - [Options](docs/options.md)
-  - [Comparation](docs/compare.md) (to similar fields)
-  - [Changelog](docs/changelog.md)
+   - [Supported fields](docs/fields.md)
+   - [Options](docs/options.md)
+   - [Comparation](docs/compare.md) (to similar fields)
+   - [Changelog](docs/changelog.md)
 1. **Advanced**
-  - [For plugin developers](docs/advanced-for-plugin-developers.md)
+   - [For plugin developers](docs/advanced-for-plugin-developers.md)
 
 ## Requirements
 
