@@ -51,6 +51,4 @@ Most of the Kirby field options will work. Be aware that these are the options o
 
 ## Plugin fields
 
-*Advanced knowlage*
-
 Some plugin fields will work out of the box. Others may not. Maybe a list will be presented here in the future.

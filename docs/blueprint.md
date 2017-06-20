@@ -99,11 +99,11 @@ It's optional but you can give the Engineer field a label if you like.
 
 The `type` option needs to be set to `engineer`.
 
-**Fields**
+**fields**
 
 It works very similar to the [structure field](https://getkirby.com/docs/cheatsheet/panel-fields/structure). The best way to understand it is to look at the basic example.
 
-**Fieldsets**
+**fieldsets**
 
 Instead of fields you can use fieldsets. Then you can choose which set to use. To learn it, see the advanced example.
 

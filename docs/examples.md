@@ -1,16 +1,16 @@
 # Example from `readme.md`
 
-If you want to recreate the example from the readme.md, here you go...
+If you want to recreate the example from the `readme.md`, here you go...
 
 **Screenshot**
 
-![Screenshot](hero.png)
+![Screenshot](https://raw.githubusercontent.com/jenstornell/field-engineer/development/docs/hero.png)
 
 **Blueprint**
 
 ```text
 fields:
-  my_advanced:
+  my_engineer:
     type: engineer
     fields:
       my_image:

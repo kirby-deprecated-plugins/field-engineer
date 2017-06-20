@@ -25,3 +25,7 @@ No support are included in the license. However, I try to always be helpful. You
 ## Refunds
 
 Refunds are not supported.
+
+## License code
+
+You will not get a license code for this plugin, at least not with this version.
