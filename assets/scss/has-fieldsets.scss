@@ -1,0 +1,10 @@
+.egr-row[data-count="0"] > .egr-empty {
+	display: block;
+}
+.egr-row[data-count="0"] > .egr-row-actions {
+	display: none;
+}
+
+.egr-dropdown-active .egr-add-button:before {
+	display: block;
+}

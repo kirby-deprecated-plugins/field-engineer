@@ -1,0 +1,49 @@
+.egr-row-actions {
+	margin-top: .5em;
+
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+.egr-add-button {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	user-select: none;
+
+	span {
+		color: #777;
+	}
+
+	&:hover span {
+		color: #000;
+	}
+}
+
+.egr-add {
+	float: right;
+}
+
+.egr-add-select {
+	padding: .75em 1.5em .75em 1.5em;
+	color: #fff;
+	border-bottom: 1px solid #222;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		color: #999;
+	}
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+.egr-dropdown-active .egr-add-button:before {
+	display: block;
+}

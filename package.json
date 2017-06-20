@@ -2,7 +2,10 @@
   "name": "field-engineer",
   "description": "Kirby Engineer Field for Kirby CMS panel.",
   "author": "Jens Törnell <jens.tornell@gmail.com>",
-  "version": "0.3",
+  "version": "rc-0.4",
   "type": "kirby-plugin",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-sourcemaps": "^2.6.0"
+  }
 }

@@ -1,77 +1,68 @@
 <?php
 class EngineerField extends BaseField {
-	static public $assets = array(
-		'js' => array(
-			'script.js',
-			'add.js',
-			'render.js',
-			'sort.js',
-		),
-		'css' => array(
-			'style.css',
-			'items.css',
-			'table.css'
-		)
-	);
+	static public $assets;
 
-	public function label() {
-		$html = tpl::load( __DIR__ . DS . 'label.php', $data = array(
-			'field' => $this,
-			'page' => $this->page
-		));
-		return $html;
+	public function __construct() {
+		$this->Presentation = new \Engineer\Presentation();
+		$this->Outline = new \Engineer\Outline();
+		$this->Field = new \Engineer\Field();
+	}
+
+	public function presentation() {
+		return $this->Presentation;
+	}
+
+	public function outline() {
+		return $this->Outline;
+	}
+
+	public function setField() {
+		return $this->Field();
 	}
 
 	public function input() {
-		kirby()->set('option', 'engineer.page.id', $this->page->id());
+		$blueprint = $this->page->blueprint()->yaml['fields'][$this->name];
 
-		$this->base = new Field\Engineer\Base;
-		$this->TableRowHidden = new Field\Engineer\TableRowHidden;
-		$this->ItemsRowHidden = new Field\Engineer\ItemsRowHidden;
-		$this->TableRow = new Field\Engineer\TableRow;
-		$this->ItemsRow = new Field\Engineer\ItemsRow;
+		$outline = $this->outline()->set($blueprint, $this->name);
+		$presentation = $this->presentation()->set($this->presentation()->prepare($blueprint), yaml($this->value));
+		unset($presentation['label']);
 
-		$fields = $this->page()->blueprint()->fields($this)->toArray();
-		$engineer_field = $fields[$this->name];
+		kirby()->set('option', 'egr.count', 0);
 
-		$this->style = (isset($this->style)) ? $this->style : 'items';
+		$args['args'] = array(
+			'instance' => $this,
+			'outline' => array(
+				'instance' => $this,
+				'outline' => $outline
+			),
+			'presentation' => array(
+				'instance' => $this,
+				'presentation' => $presentation,
+				'field_name' => $this->name,
+				'id' => $this->name
+			),
+		);
 
-		$html = tpl::load( __DIR__ . DS . 'styles' . DS . $this->style . '.php', $data = array(
-			'field' => $this,
-			'fields' => $fields,
-			'engineer_field' => $engineer_field,
-			'page' => $this->page
-		));
-		return $html;
-	}
-
-	public function base() {
-		return $this->base;
-	}
-
-	public function tableRow() {
-		return $this->TableRow;
-	}
-
-	public function itemsRow() {
-		return $this->ItemsRow;
-	}
-
-	public function tableRowHidden() {
-		return $this->TableRowHidden;
-	}
-
-	public function itemsRowHidden() {
-		return $this->ItemsRowHidden;
+		$template = egr::snippet('template', $args);
+		return $template;
 	}
 
 	public function element() {
 		$element = parent::element();
 		$element->data('field', 'engineer');
 		$element->data('name', $this->name);
-		if(isset($this->limit)) {
-			$element->data('limit', $this->limit);
-		}
 		return $element;
 	}
+}
+
+if(c::get('engineer.debug', false)) {
+	EngineerField::$assets = array(
+		'css' => array('style.css'),
+		'js' => array('script.js'),
+	);
+} else {
+	EngineerField::$assets = array(
+		'css' => array('style.min.css'),
+		'js' => array('script.min.js'),
+	);
 }
