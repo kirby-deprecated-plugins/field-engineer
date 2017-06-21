@@ -65,7 +65,7 @@ fields:
           first:
             type: text
           second:
-            type: toggle
+            type: text
 ```
 
 **Content**
