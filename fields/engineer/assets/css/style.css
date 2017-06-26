@@ -167,4 +167,8 @@
 .egr-dropdown-active .egr-add-button:before {
   display: block; }
 
+/* Images */
+.egr-odd [data-field-name="images"] .grid-item figure {
+  border: 1px solid #ddd; }
+
 /*# sourceMappingURL=style.css.map */

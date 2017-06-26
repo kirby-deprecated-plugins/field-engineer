@@ -1,5 +1,11 @@
 # Fields
 
+## Table of contents
+
+1. [Subfields](#subfields)
+1. [Subfield options](#subfields)
+1. [Plugin fields](#plugin-fields)
+
 ### Subfields
 
 Most of the built in Kirby fields will work as subfields to Engineer.
@@ -43,12 +49,22 @@ Most of the Kirby field options will work. Be aware that these are the options o
 | [`placeholder`](https://getkirby.com/docs/panel/blueprints/form-fields#placeholders)                                | Yes       |&nbsp;
 | [`readonly`](https://getkirby.com/docs/panel/blueprints/form-fields#readonly-fields)                                | Yes       |&nbsp;
 | [`required`](https://getkirby.com/docs/panel/blueprints/form-fields#required-fields)                                | Yes       |&nbsp;
-| [`translate`](https://getkirby.com/docs/panel/blueprints/form-fields#prevent-field-values-in-non-default-languages) | ?         |&nbsp;
-| [`translations`](https://getkirby.com/docs/panel/blueprints/form-fields#translating-form-fields)                    | ?         |&nbsp;
+| [`translate`](https://getkirby.com/docs/panel/blueprints/form-fields#prevent-field-values-in-non-default-languages) | -         |&nbsp;
+| [`translations`](https://getkirby.com/docs/panel/blueprints/form-fields#translating-form-fields)                    | -         |&nbsp;
 | [`type`](https://getkirby.com/docs/panel/blueprints/form-fields)                                                    | Yes       |&nbsp;
 | [`validate`](https://getkirby.com/docs/panel/blueprints/form-fields#validation)                                     | -         | Only min / max with js
 | [`width`](https://getkirby.com/docs/panel/blueprints/form-fields#creating-grids)                                    | Yes       | &nbsp;
 
 ## Plugin fields
 
-Some plugin fields will work out of the box. Others may not. Maybe a list will be presented here in the future.
+Many fields will work out of the box with Engineer. Here are a few of the most popular relevant fields that works.
+  
+| Plugin field                                                            | Supported
+| ----------------------------------------------------------------------- | -----------
+| [Controlled list](https://github.com/rasteiner/controlledlist)          | Yes
+| [Kirby Hero Field](https://github.com/jenstornell/kirby-hero-field)     | Yes
+| [Kirby Images](https://github.com/medienbaecker/kirby-images)           | Yes
+| [Kirby Logic Field](https://github.com/jenstornell/kirby-logic-field)   | Yes
+| [Kirby Quickselect](https://github.com/medienbaecker/kirby-quickselect) | Yes
+| [Select a structure](https://github.com/CalebGrove/select-a-structure)  | Yes
+| [Switch field](https://github.com/distantnative/field-switch)           | Yes

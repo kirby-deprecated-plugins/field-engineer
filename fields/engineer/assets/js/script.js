@@ -276,7 +276,11 @@ EgrRender = (function () {
 						}
 						break;
 					default:
-						output += fn.input(element, field_name, is_single, tab);
+						if(element.hasClass('images')) {
+							output += fn.textarea(element, field_name, tab);
+						} else {
+							output += fn.input(element, field_name, is_single, tab);
+						}
 				}
 				break;
 			case 'SELECT':
@@ -535,11 +539,6 @@ var EgrTrigger = (function () {
 		fn.triggerFields(row);
 		fn.triggerPlugins(row);
 
-		/*row.find('.egr-row').each(function( index ) {
-			fn.triggerFields($(this));
-			fn.triggerPlugins($(this));
-		});*/
-
 		fn.checkDuplicates(row);
 	};
 
@@ -549,12 +548,22 @@ var EgrTrigger = (function () {
 		row.find('[data-field="imagefield"]').removeData('imagefield').imagefield();
 		row.find('[data-field="autocomplete"]').removeData('autocomplete').off('keydown keyup').autocomplete();
 		row.find('[data-field="editor"]').removeData('editor').off('keydown click').editor();
-		//row.find('.tag-input').tags();
 		row.find('[data-field="counter"]').removeData('counter').counter();
 	};
 
 	fn.triggerPlugins = function(row) {
-		row.find('[data-field="images"]').removeData('images').images();
+		if ( row.find('[data-field="images"]').length ) {
+			row.find('[data-field="images"]').removeData('images').images();
+		}
+		if ( row.find('[data-field="hero"]').length ) {
+			row.find('[data-field="hero"]').removeData('hero').hero();
+		}
+		if ( row.find('[data-field="quickselect"]').length ) {
+			row.find('[data-field="quickselect"]').removeData('quickselect').quickselect();
+		}
+		/*if ( row.find('[data-field="list"]').length ) {
+			row.find('[data-field="list"]').removeData('list').list();
+		}*/
 	};
 
 	fn.checkDuplicates = function(row) {

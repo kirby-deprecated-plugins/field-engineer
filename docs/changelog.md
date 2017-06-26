@@ -1,5 +1,18 @@
 # Changelog
 
+**0.5**
+
+- Added requirement: PHP7+
+- Support for multi language setup
+- Support for Kirby 2.5.1
+- Support for [Controlled list](https://github.com/rasteiner/controlledlist)
+- Support for [Kirby Images](https://github.com/medienbaecker/kirby-images)
+- Support for [Kirby Hero Field](https://github.com/jenstornell/kirby-hero-field)
+- Support for [Kirby Logic Field](https://github.com/jenstornell/kirby-logic-field)
+- Support for [Kirby Quickselect](https://github.com/medienbaecker/kirby-quickselect)
+- Support for [Select a structure](https://github.com/CalebGrove/select-a-structure)
+- Support for [Switch field](https://github.com/distantnative/field-switch)
+
 **rc-0.4**
 
 - Complete rewrite

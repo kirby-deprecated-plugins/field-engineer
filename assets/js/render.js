@@ -82,7 +82,11 @@ EgrRender = (function () {
 						}
 						break;
 					default:
-						output += fn.input(element, field_name, is_single, tab);
+						if(element.hasClass('images')) {
+							output += fn.textarea(element, field_name, tab);
+						} else {
+							output += fn.input(element, field_name, is_single, tab);
+						}
 				}
 				break;
 			case 'SELECT':

@@ -1,6 +1,6 @@
 # Kirby Engineer Field
 
-[![Version rc-0.4](https://img.shields.io/badge/version-rc--0.4-blue.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/license.md)
+[![Version 0.5](https://img.shields.io/badge/version-0.5-blue.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/development/docs/license.md)
 
 ***Note:*** *This is a commercial plugin. Read more about [how to purchase](#purchase).*
 
@@ -39,7 +39,8 @@ You can have pretty much any field structure you want. Also see the [blueprint](
 
 ## Requirements
 
-- [**Kirby**](https://getkirby.com/) 2.4.1+
+- [**Kirby**](https://getkirby.com) 2.4.1+
+- [PHP](https://www.php.net) 7+
 - A modern browser like [Chrome](https://www.google.se/chrome/browser/desktop/index.html), [Firefox](https://www.mozilla.org/firefox/new/) or [Edge](https://www.microsoft.com/windows/microsoft-edge) (Internet Explorer does not work).
 
 ## Disclaimer
