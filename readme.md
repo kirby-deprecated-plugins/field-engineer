@@ -1,6 +1,6 @@
 # Kirby Engineer Field
 
-[![Version 0.6 - Grid](https://img.shields.io/badge/version-0.6 -- Grid-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/license.md)
+[![Version 0.6](https://img.shields.io/badge/version-0.6-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/license.md)
 
 ***Note:*** *This is a commercial plugin. Read more about [how to purchase](#purchase).*
 
