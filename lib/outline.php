@@ -15,6 +15,7 @@ class Outline {
 						}
 						foreach($fieldset['fields'] as $field_name => $field) {
 							$out[$name]['_level'] = $level;
+
 							if(isset($field['label'])) {
 								$out[$name]['_label'] = $field['label'];
 							}
@@ -22,6 +23,10 @@ class Outline {
 							$out = $this->set($field, $name . ',' . $field_name, $out, $out[$name]['_level'] + 1);
 							if(isset($field['buttons'])) {
 								$out[$name . ',' . $field_name]['buttons'] = $field['buttons'];
+							}
+
+							if($field['type'] == 'engineer' && isset($field['width'])) {
+								$out[$name . ',' . $field_name]['width'] = $field['width'];
 							}
 						}
 					}

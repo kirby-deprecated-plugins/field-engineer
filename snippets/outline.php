@@ -6,9 +6,13 @@
 			data-id="<?php echo $row_name; ?>"
 			data-fieldset-count="<?php echo count($set['fieldsets']); ?>"
 		>
-			<div class="egr-fieldsets">
+			<?php
+				$grid = (isset($outline[$row_name]['width'])) ? ' egr-grid-item egr-grid-item-' . str_replace('/', '-', $outline[$row_name]['width']) : '';
+			?>
+			<div class="egr-fieldsets<?php echo $grid; ?>">
 				<?php foreach($set['fieldsets'] as $fieldset_name => $fieldset ) : ?>
 					<?php $fieldset_names[$fieldset_name] = (isset($fieldset['label'])) ? $fieldset['label'] : $fieldset_name; ?>
+
 					<div class="egr-fieldset" data-fieldset-name="<?php echo $fieldset_name; ?>">
 						<div class="egr-fields"><?php
 							if(!empty($fieldset['fields'])) {
