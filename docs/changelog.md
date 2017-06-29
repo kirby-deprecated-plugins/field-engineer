@@ -14,7 +14,7 @@
 - Field [Kirby time field](https://github.com/iksi/KirbyTimeField) works with Engineer.
 - Field [Kirby country field](https://github.com/iksi/KirbyCountryField) works with Engineer.
 - Field [Kirby decimal field](https://github.com/iksi/KirbyDecimalField) works with Engineer.
-- Docs - Separated [field plugins](field.md) that works "out of the box" from the "supported" ones.
+- Docs - Separated [field plugins](fields.md) that works "out of the box" from the "supported" ones.
 - Docs - [Troubleshooting](troubleshooting.md) steps added.
 
 **0.5**
