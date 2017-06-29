@@ -1,6 +1,6 @@
 # Kirby Engineer Field
 
-[![Version 0.5](https://img.shields.io/badge/version-0.5-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/license.md)
+[![Version 0.6 - Grid](https://img.shields.io/badge/version-0.6 -- Grid-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/license.md)
 
 ***Note:*** *This is a commercial plugin. Read more about [how to purchase](#purchase).*
 
@@ -33,6 +33,7 @@ You can have pretty much any field structure you want. Also see the [blueprint](
    - [Supported fields](docs/fields.md)
    - [Options](docs/options.md)
    - [Comparation](docs/compare.md) (to similar fields)
+   - [Troubleshooting](docs/troubleshooting.md)
    - [Changelog](docs/changelog.md)
 1. **Advanced**
    - [For plugin developers](docs/advanced-for-plugin-developers.md)

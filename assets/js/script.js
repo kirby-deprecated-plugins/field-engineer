@@ -36,11 +36,11 @@
 				}
 			});
 
-			field.on('click', '.egr-arrow-up', function(e) {
+			field.on('click', '.egr-sort-up', function(e) {
 				EgrSort.sortUp(field, $(this));
 			});
 
-			field.on('click', '.egr-arrow-down', function(e) {
+			field.on('click', '.egr-sort-down', function(e) {
 				EgrSort.sortDown(field, $(this));
 			});
 

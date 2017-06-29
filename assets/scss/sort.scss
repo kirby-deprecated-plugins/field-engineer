@@ -2,20 +2,15 @@
 	border-bottom: 2px solid #ddd;
 }
 
-.egr-sorting {
-	border-left: 1px solid #ddd;
-	border-image: linear-gradient(to top, #ccc, rgba(0, 0, 0, 0)) 1 100%;
-	float: right;
-}
-.egr-presentation .egr-fieldset:first-child > .egr-actions > .egr-arrow-up {
+.egr-presentation .egr-fieldset:first-child > .egr-actions > .egr-sort-up {
 	display: none;
 }
-.egr-presentation .egr-fieldset:last-child > .egr-actions > .egr-arrow-down {
+.egr-presentation .egr-fieldset:last-child > .egr-actions > .egr-sort-down {
 	display: none;
 }
 
-.egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-arrow-up,
-.egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-arrow-down,
+.egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-sort-up,
+.egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-sort-down,
 .egr-presentation .egr-fieldset:only-child > .egr-actions > .egr-sorting {
 	display: none;
 }

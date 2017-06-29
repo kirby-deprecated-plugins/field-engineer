@@ -58,13 +58,24 @@ Most of the Kirby field options will work. Be aware that these are the options o
 ## Plugin fields
 
 Many fields will work out of the box with Engineer. Here are a few of the most popular relevant fields that works.
+
+### Works out of the box
   
-| Plugin field                                                            | Supported
+| Plugin field                                                            | Tested
 | ----------------------------------------------------------------------- | -----------
 | [Controlled list](https://github.com/rasteiner/controlledlist)          | Yes
-| [Kirby Hero Field](https://github.com/jenstornell/kirby-hero-field)     | Yes
-| [Kirby Images](https://github.com/medienbaecker/kirby-images)           | Yes
+| [Kirby date field](https://github.com/iksi/KirbyDateField)              | Yes
+| [Kirby country field](https://github.com/iksi/KirbyCountryField)        | Yes
+| [Kirby decimal field](https://github.com/iksi/KirbyDecimalField)        | Yes
 | [Kirby Logic Field](https://github.com/jenstornell/kirby-logic-field)   | Yes
-| [Kirby Quickselect](https://github.com/medienbaecker/kirby-quickselect) | Yes
+| [Kirby time field](https://github.com/iksi/KirbyTimeField)              | Yes
 | [Select a structure](https://github.com/CalebGrove/select-a-structure)  | Yes
 | [Switch field](https://github.com/distantnative/field-switch)           | Yes
+
+### Supported by Engineer
+
+| Plugin field                                                            | Supported
+| ----------------------------------------------------------------------- | -----------
+| [Kirby Hero Field](https://github.com/jenstornell/kirby-hero-field)     | Yes
+| [Kirby Images](https://github.com/medienbaecker/kirby-images)           | Yes
+| [Kirby Quickselect](https://github.com/medienbaecker/kirby-quickselect) | Yes

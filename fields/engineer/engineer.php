@@ -4,12 +4,17 @@ class EngineerField extends BaseField {
 
 	public function __construct() {
 		$this->Presentation = new \Engineer\Presentation();
+		$this->PresentationArray = new \Engineer\PresentationArray();
 		$this->Outline = new \Engineer\Outline();
 		$this->Field = new \Engineer\Field();
 	}
 
 	public function presentation() {
 		return $this->Presentation;
+	}
+
+	public function presentationArray() {
+		return $this->PresentationArray;
 	}
 
 	public function outline() {
@@ -24,7 +29,9 @@ class EngineerField extends BaseField {
 		$blueprint = $this->page->blueprint()->yaml['fields'][$this->name];
 
 		$outline = $this->outline()->set($blueprint, $this->name);
-		$presentation = $this->presentation()->set($this->presentation()->prepare($blueprint), yaml($this->value));
+		$presentation_array = $this->presentationArray()->prepare($blueprint);
+
+		$presentation = $this->presentation()->set($presentation_array, yaml($this->value));
 		unset($presentation['label']);
 
 		kirby()->set('option', 'egr.count', 0);

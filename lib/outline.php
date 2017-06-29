@@ -20,6 +20,9 @@ class Outline {
 							}
 							
 							$out = $this->set($field, $name . ',' . $field_name, $out, $out[$name]['_level'] + 1);
+							if(isset($field['buttons'])) {
+								$out[$name . ',' . $field_name]['buttons'] = $field['buttons'];
+							}
 						}
 					}
 				}

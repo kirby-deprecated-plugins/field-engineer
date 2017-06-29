@@ -421,11 +421,11 @@ EgrRender = (function () {
 				}
 			});
 
-			field.on('click', '.egr-arrow-up', function(e) {
+			field.on('click', '.egr-sort-up', function(e) {
 				EgrSort.sortUp(field, $(this));
 			});
 
-			field.on('click', '.egr-arrow-down', function(e) {
+			field.on('click', '.egr-sort-down', function(e) {
 				EgrSort.sortDown(field, $(this));
 			});
 
@@ -506,7 +506,7 @@ var EgrToggleActive = (function () {
 
 	fn.toggle = function(obj, this_obj) {
 		obj.find('.egr-actions').hide();
-		this_obj.children('.egr-actions').show();
+		this_obj.children('.egr-actions').css('display', 'flex');
 		EgrSort.toggle(obj, this_obj);
 	};
 

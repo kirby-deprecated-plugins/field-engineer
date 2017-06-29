@@ -1,5 +1,22 @@
 # Changelog
 
+**v0.6 - Grid**
+
+- Feature - Blueprint option to choose which buttons to use.
+- Feature - Blueprint option `width` can now be set to engineer fields.
+- Improved the dropdown arrow position.
+- Improved the trash icon to look like the Panel trash icon.
+- Improved the action button bar ui.
+- Improved "Add the first entry" with icons to show if it's containing fields or fieldsets.
+- Removed labels from the action buttons to save space for small fields.
+- Removed border for [Kirby Images](https://github.com/medienbaecker/kirby-images). The css is not handled by Kirby Images instead.
+- Field [Kirby date field](https://github.com/iksi/KirbyDateField) works with Engineer.
+- Field [Kirby time field](https://github.com/iksi/KirbyTimeField) works with Engineer.
+- Field [Kirby country field](https://github.com/iksi/KirbyCountryField) works with Engineer.
+- Field [Kirby decimal field](https://github.com/iksi/KirbyDecimalField) works with Engineer.
+- Docs - Separated [field plugins](field.md) that works "out of the box" from the "supported" ones.
+- Docs - [Troubleshooting](troubleshooting.md) steps added.
+
 **0.5**
 
 - Added requirement: PHP7+

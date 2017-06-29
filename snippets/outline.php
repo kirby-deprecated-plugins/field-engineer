@@ -35,7 +35,11 @@
 								<?php endforeach; ?>
 							<?php endif; ?>
 						</div>
-						<?php echo egr::snippet('actions'); ?>
+
+						<?php
+						$buttons = (isset($set['buttons'])) ? $set['buttons'] : array();
+						echo egr::snippet('actions', array('buttons' => $buttons));
+						?>
 					</div>
 				<?php endforeach; ?>
 			</div>

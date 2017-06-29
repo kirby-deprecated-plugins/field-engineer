@@ -65,7 +65,7 @@ fields:
           first:
             type: text
           second:
-            type: text
+            type: toggle
 ```
 
 **Content**
@@ -106,6 +106,19 @@ It works very similar to the [structure field](https://getkirby.com/docs/cheatsh
 **fieldsets**
 
 Instead of fields you can use fieldsets. Then you can choose which set to use. To learn it, see the advanced example.
+
+**buttons**
+
+If you don't use this option it will fallback to the following buttons:
+
+```text
+buttons:
+  - delete
+  - clone
+  - sort-up
+  - sort-down
+  - sort
+```
 
 ---
 

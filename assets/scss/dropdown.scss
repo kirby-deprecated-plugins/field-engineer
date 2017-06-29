@@ -18,6 +18,14 @@
 		margin-top: -.3em;
 	}
 }
+
+.egr-empty .egr-dropdown:before {
+	left: 2em;
+}
+.egr-row-actions .egr-dropdown:before {
+	left: calc(100% - 2.4em);
+}
+
 .egr-dropdown-active .egr-dropdown {
 	display: block;
 }
