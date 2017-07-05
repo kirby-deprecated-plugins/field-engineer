@@ -4,11 +4,11 @@
 
 - **Feature** - Delete warning message.
 - **Feature** - Delete area preview.
-- **Field** - [Kirby list field](https://github.com/TimOetting/kirby-list-field) is now supported.
 - **Breaking change** - The `width` option for rows is renamed `rowWidth` instead. It will make it more future proof and prevent collisions with `width` on the root of the engineer field.
 - **Breaking change** - The option `engineer.label.fallback` is removed. No good reason for a label fallback.
 - **Bug fixes** - Minor issues.
 - **Docs** - Because of some recent Panel bugs I pushed the requirement to Kirby 2.5.2.
+- ~~**Field** - [Kirby list field](https://github.com/TimOetting/kirby-list-field) is now supported.~~ (a dom bug remains)
 
 **v0.6**
 
