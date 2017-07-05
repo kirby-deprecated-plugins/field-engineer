@@ -4,16 +4,18 @@ use c;
 
 class Field {
 	function data($key, $subfield, $page, $count = false) {
-		if(!c::get('engineer.label.fallback', true)) {
-			if(!isset($subfield['label'])) {
-				$subfield['label'] = '';
-			}
-		}
+		$subfield['label'] = (isset($subfield['label'])) ? $subfield['label'] : '';
+
 		if($count) {
 			$count = '_i' . kirby()->set('option', 'egr.count', kirby()->get('option', 'egr.count', 0) + 1);
 		}
 
 		$value = (isset($subfield['value'])) ? $subfield['value'] : null;
+
+		if(is_array($value)) {
+			$value = implode("\n" , $value);
+		}
+
 		$suffix = $count . '_egr__';
 		$name = $key . $suffix;
 		$subfield = $this->fixSubfield($subfield);

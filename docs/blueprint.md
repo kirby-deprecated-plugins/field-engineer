@@ -99,6 +99,30 @@ It's optional but you can give the Engineer field a label if you like.
 
 The `type` option needs to be set to `engineer`.
 
+**width**
+
+*Changed behavior from v0.6 to v0.7*
+
+The width of the engineer container.
+
+**rowWidth**
+
+The `rowWidth` works similar to field `width`. This option set the width of the fields or fieldset rows.
+
+In the example below, the field container will take `1/2` of the total width. Each added row take `1/3` of the container width.
+
+```text
+my_engineer:
+  type: engineer
+  width: 1/2
+  rowWidth: 1/3
+  fields:
+    text:
+      type: text
+    image:
+      type: image
+``` 
+
 **fields**
 
 It works very similar to the [structure field](https://getkirby.com/docs/cheatsheet/panel-fields/structure). The best way to understand it is to look at the basic example.

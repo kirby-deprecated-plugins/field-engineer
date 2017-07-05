@@ -85,7 +85,15 @@ EgrRender = (function () {
 						if(element.hasClass('images')) {
 							output += fn.textarea(element, field_name, tab);
 						} else {
-							output += fn.input(element, field_name, is_single, tab);
+							if(is_single) {
+								output += fn.input(element, field_name, is_single, tab);
+							} else {
+								if(field_name == 'datetime') {
+									output += fn.input(element, field_name);
+								} else {
+									output += fn.inputs(element, field_name, tab);
+								}
+							}
 						}
 				}
 				break;
@@ -103,6 +111,21 @@ EgrRender = (function () {
 			return '';
 		}
 		return tab + "  _fieldset: " + fieldset_name + "\n";
+	};
+
+	fn.inputs = function(element, field_name, tab) {
+		var value = '';
+		var indent = tab + ' ';
+
+		element.each(function( index ) {
+			var val = $(this).val();
+			val = val.replace(/"/g, '\\"');
+			value += indent + '- "' + val + '"' + "\n";
+
+		});
+
+		value = value.slice(0, -1);
+		return field_name + ": \n" + value + "\n";
 	};
 
 	/* Input */

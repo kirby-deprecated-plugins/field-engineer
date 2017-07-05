@@ -27,9 +27,9 @@ var EgrTrigger = (function () {
 		if ( row.find('[data-field="quickselect"]').length ) {
 			row.find('[data-field="quickselect"]').removeData('quickselect').quickselect();
 		}
-		/*if ( row.find('[data-field="list"]').length ) {
+		if ( row.find('[data-field="list"]').length ) {
 			row.find('[data-field="list"]').removeData('list').list();
-		}*/
+		}
 	};
 
 	fn.checkDuplicates = function(row) {

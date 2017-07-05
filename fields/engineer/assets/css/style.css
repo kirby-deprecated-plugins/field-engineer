@@ -11,21 +11,20 @@
   position: relative; }
 
 .egr-fieldset {
-  padding-top: 1em;
+  padding-top: 1.5em;
   padding-right: 1.5em;
   border: 2px solid #ddd;
-  margin-bottom: -2px;
   background: #fff;
   position: relative; }
-
-.egr-row-blueprint .egr-fieldset {
-  opacity: .5; }
 
 .egr-even > .egr-fieldsets > .egr-fieldset {
   background: #eee; }
 
 .egr-outline {
   display: none; }
+
+.egr-fields {
+  flex: 1; }
 
 .egr-actions {
   width: calc(100% + 1.5em);
@@ -115,6 +114,9 @@
     font-size: .9em;
     outline: none; }
 
+.egr-outline {
+  opacity: .5; }
+
 .egr .ui-sortable-helper {
   border-bottom: 2px solid #ddd; }
 
@@ -168,17 +170,18 @@
   display: flex;
   flex-wrap: wrap; }
 
-.egr-grid-item > .egr-fieldset {
-  width: 100%; }
+.egr-fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 @media screen and (min-width: 60em) {
   .egr-grid-item {
-    width: calc(100% + 1.5em);
-    margin-bottom: -1.5em; }
-  .egr-grid-item > .egr-fieldset {
+    width: calc(100% + 1.5em); }
+  .egr-fieldset {
     margin-right: 1.5em;
-    margin-bottom: 1.5em;
-    display: inline-block; }
+    margin-bottom: 1.5em; }
   .egr-grid-item-1-2 > .egr-fieldset {
     width: calc(100% / 2 - 1.5em); }
   .egr-grid-item-1-3 > .egr-fieldset {
@@ -187,5 +190,61 @@
     width: calc(100% / 4 - 1.5em); }
   .egr-grid-item-1-5 > .egr-fieldset {
     width: calc(100% / 5 - 1.5em); } }
+
+.egr-element-delete {
+  width: calc(100% + 1.5em);
+  z-index: 100;
+  background: #fff;
+  display: flex; }
+  .egr-element-delete .egr-delete-message {
+    padding: 1.5em;
+    position: relative;
+    background: #fff;
+    margin: 0 auto; }
+
+.egr-delete-buttons {
+  max-width: 20em;
+  justify-content: space-between;
+  display: flex;
+  margin-top: .5em; }
+  .egr-delete-buttons > * {
+    cursor: pointer;
+    line-height: 2em; }
+
+.egr-delete-cancel {
+  padding: 0 .5em;
+  color: #777;
+  border: 2px solid transparent; }
+  .egr-delete-cancel span {
+    border-bottom: 2px solid #eee; }
+  .egr-delete-cancel:hover {
+    color: #000; }
+    .egr-delete-cancel:hover span {
+      border-bottom: 2px solid #ccc; }
+
+.egr-delete-apply {
+  border-radius: .3em;
+  padding: 0 1em;
+  color: #b3000a;
+  border: 2px solid #b3000a;
+  font-weight: bold; }
+  .egr-delete-apply:hover {
+    color: #fff;
+    background: #b3000a; }
+
+.egr-delete-active {
+  position: relative; }
+
+.egr-delete-active .egr-fields:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #b3000a;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: .2; }
 
 /*# sourceMappingURL=style.css.map */

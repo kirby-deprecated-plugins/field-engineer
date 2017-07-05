@@ -1,22 +1,15 @@
-<?php
-$count = (isset($presentation['sets'])) ? count($presentation['sets']) : 0;
-$buttons = (isset($presentation['buttons'])) ? $presentation['buttons'] : array();
-$grid = (isset($presentation['width'])) ? ' egr-grid-item egr-grid-item-' . str_replace('/', '-', $presentation['width']) : '';
-$oddeven = egr::oddEven($presentation['_level'] + 1);
-?>
-
 <div
-	class="egr-row <?php echo $oddeven; ?>"
+	class="egr-row <?php echo egr::oddEven($presentation['_level'] + 1); ?>"
 	data-field-name="<?php echo $field_name; ?>"
 	data-id="<?php echo $id; ?>"
-	data-count="<?php echo $count; ?>"
+	data-count="<?php echo egr::count($presentation); ?>"
 	data-fieldset-count="<?php echo count($presentation['_dropdown']); ?>"
 >
 	<?php if(isset($presentation['label'])) : ?>
 		<label class="label"><?php echo $presentation['label']; ?></label>
 	<?php endif; ?>	
 
-	<div class="egr-fieldsets<?php echo $grid; ?>">
+	<div class="egr-fieldsets<?php echo egr::grid($presentation); ?>">
 		<?php if(isset($presentation['sets'])) : ?>
 			<?php
 				foreach($presentation['sets'] as $set_id => $set ) :
@@ -28,7 +21,7 @@ $oddeven = egr::oddEven($presentation['_level'] + 1);
 								'id' => $id,
 							));
 						?></div>
-					<?php echo egr::snippet('actions', array('buttons' => $buttons)); ?>
+					<?php echo egr::snippet('actions', array('buttons' => egr::buttons($presentation))); ?>
 				</div><?php
 			endforeach; endif; ?>
 	</div>

@@ -16,8 +16,12 @@
 				EgrAdd.add(field, $(this));
 			});
 
-			field.on('click', '.egr-delete', function() {
-				EgrDelete.delete(field, $(this));
+			field.on('click', '.egr-delete-apply', function() {
+				EgrDelete.deleteAction(field, $(this));
+			});
+
+			field.on('click', '.egr-delete-cancel', function() {
+				EgrDelete.deleteCancel(field, $(this));
 			});
 
 			field.on('click', '.egr-clone', function() {
@@ -28,6 +32,10 @@
 				if(!$(e.target).closest('.egr-fieldset').not(this).length){
 					EgrToggleActive.toggle(field, $(this));
 				}
+			});
+
+			field.on('click', '.egr-delete', function() {
+				EgrDelete.deleteMessage(field, $(this));
 			});
 
 			$(document).on('click', function(e) {

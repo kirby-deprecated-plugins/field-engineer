@@ -30,7 +30,7 @@ Most of the built in Kirby fields will work as subfields to Engineer.
 | [`tags`](https://getkirby.com/docs/cheatsheet/panel-fields/tags)             | -         | DOM issues
 | [`tel`](https://getkirby.com/docs/cheatsheet/panel-fields/tel)               | Yes       |&nbsp;
 | [`text`](https://getkirby.com/docs/cheatsheet/panel-fields/text)             | Yes       |&nbsp;
-| [`textarea`](https://getkirby.com/docs/cheatsheet/panel-fields/textarea)     | Yes       | Without help butotons
+| [`textarea`](https://getkirby.com/docs/cheatsheet/panel-fields/textarea)     | Yes       | Without help buttons
 | [`time`](https://getkirby.com/docs/cheatsheet/panel-fields/time)             | Yes       |&nbsp;
 | [`toggle`](https://getkirby.com/docs/cheatsheet/panel-fields/toggle)         | Yes       |&nbsp;
 | [`url`](https://getkirby.com/docs/cheatsheet/panel-fields/url)               | Yes       |&nbsp;
@@ -78,4 +78,5 @@ Many fields will work out of the box with Engineer. Here are a few of the most p
 | ----------------------------------------------------------------------- | -----------
 | [Kirby Hero Field](https://github.com/jenstornell/kirby-hero-field)     | Yes
 | [Kirby Images](https://github.com/medienbaecker/kirby-images)           | Yes
+| [Kirby list field](https://github.com/TimOetting/kirby-list-field)      | Yes
 | [Kirby Quickselect](https://github.com/medienbaecker/kirby-quickselect) | Yes

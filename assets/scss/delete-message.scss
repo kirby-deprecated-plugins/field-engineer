@@ -1,0 +1,73 @@
+.egr-element-delete {
+	width: calc(100% + 1.5em);
+	z-index: 100;
+	background: #fff;
+	display: flex;
+
+	.egr-delete-message {
+		padding: 1.5em;
+		position: relative;
+		background: #fff;
+		margin: 0 auto;
+	}
+}
+
+.egr-delete-buttons {
+	max-width: 20em;
+	justify-content: space-between;
+	display: flex;
+	margin-top: .5em;
+
+	>* {
+		cursor: pointer;
+		line-height: 2em;
+	}
+}
+
+.egr-delete-cancel {
+	padding: 0 .5em;
+	color: #777;
+	border: 2px solid transparent;
+
+	span {
+		border-bottom: 2px solid #eee;
+	}
+
+	&:hover {
+		color: #000;
+
+		span {
+			border-bottom: 2px solid #ccc;
+		}
+	}
+}
+
+.egr-delete-apply {
+	border-radius: .3em;
+	padding: 0 1em;
+	color: #b3000a;
+	border: 2px solid #b3000a;
+	font-weight: bold;
+
+	&:hover {
+		color: #fff;
+		background: #b3000a;
+	}
+}
+
+.egr-delete-active {
+	position: relative;
+}
+
+.egr-delete-active .egr-fields:before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #b3000a;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: .2;
+}

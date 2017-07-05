@@ -14,16 +14,11 @@
 }
 
 .egr-fieldset {
-	padding-top: 1em;
+	padding-top: 1.5em;
 	padding-right: 1.5em;
 	border: 2px solid #ddd;
-	margin-bottom: -2px;
 	background: #fff;
 	position: relative;
-}
-
-.egr-row-blueprint .egr-fieldset {
-	opacity: .5;
 }
 
 .egr-even > .egr-fieldsets > .egr-fieldset {
@@ -32,4 +27,8 @@
 
 .egr-outline {
 	display: none;
+}
+
+.egr-fields {
+	flex: 1;
 }

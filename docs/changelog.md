@@ -1,6 +1,16 @@
 # Changelog
 
-**v0.6 - Grid**
+**v0.7**
+
+- **Feature** - Delete warning message.
+- **Feature** - Delete area preview.
+- **Field** - [Kirby list field](https://github.com/TimOetting/kirby-list-field) is now supported.
+- **Breaking change** - The `width` option for rows is renamed `rowWidth` instead. It will make it more future proof and prevent collisions with `width` on the root of the engineer field.
+- **Breaking change** - The option `engineer.label.fallback` is removed. No good reason for a label fallback.
+- **Bug fixes** - Minor issues.
+- **Docs** - Because of some recent Panel bugs I pushed the requirement to Kirby 2.5.2.
+
+**v0.6**
 
 - Feature - Blueprint option to choose which buttons to use.
 - Feature - Blueprint option `width` can now be set to engineer fields.
@@ -9,7 +19,7 @@
 - Improved the action button bar ui.
 - Improved "Add the first entry" with icons to show if it's containing fields or fieldsets.
 - Removed labels from the action buttons to save space for small fields.
-- Removed border for [Kirby Images](https://github.com/medienbaecker/kirby-images). The css is not handled by Kirby Images instead.
+- Removed border for [Kirby Images](https://github.com/medienbaecker/kirby-images). The css is now handled by Kirby Images instead.
 - Field [Kirby date field](https://github.com/iksi/KirbyDateField) works with Engineer.
 - Field [Kirby time field](https://github.com/iksi/KirbyTimeField) works with Engineer.
 - Field [Kirby country field](https://github.com/iksi/KirbyCountryField) works with Engineer.

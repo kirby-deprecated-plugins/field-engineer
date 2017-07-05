@@ -105,12 +105,25 @@ var EgrCount = (function () {
 var EgrDelete = (function () {
 	var fn = {};
 
-	fn.delete = function(obj, this_obj) {
+	fn.deleteMessage = function(obj, this_obj) {
+		var delete_message = $(document).find('.egr-outline .egr-element-delete').first();
+		fn.deleteCancel(obj, this_obj);
+		obj.find('.egr-actions').hide();
+		this_obj.closest('.egr-fieldset').addClass('egr-delete-active');
+		this_obj.closest('.egr-fieldset').append(delete_message.clone());
+	};
+
+	fn.deleteAction = function(obj, this_obj) {
 		var fieldsets = this_obj.closest('.egr-fieldsets');
 		this_obj.closest('.egr-fieldset').remove();
 		EgrSort.sort(obj);
 		EgrCount.trigger(obj, fieldsets);
 		EgrRender.render(obj);
+	};
+
+	fn.deleteCancel = function(obj, this_obj) {
+		obj.find('.egr-element-delete').remove();
+		obj.find('.egr-delete-active').removeClass('egr-delete-active');
 	};
 
 	return fn;
@@ -279,7 +292,15 @@ EgrRender = (function () {
 						if(element.hasClass('images')) {
 							output += fn.textarea(element, field_name, tab);
 						} else {
-							output += fn.input(element, field_name, is_single, tab);
+							if(is_single) {
+								output += fn.input(element, field_name, is_single, tab);
+							} else {
+								if(field_name == 'datetime') {
+									output += fn.input(element, field_name);
+								} else {
+									output += fn.inputs(element, field_name, tab);
+								}
+							}
 						}
 				}
 				break;
@@ -297,6 +318,21 @@ EgrRender = (function () {
 			return '';
 		}
 		return tab + "  _fieldset: " + fieldset_name + "\n";
+	};
+
+	fn.inputs = function(element, field_name, tab) {
+		var value = '';
+		var indent = tab + ' ';
+
+		element.each(function( index ) {
+			var val = $(this).val();
+			val = val.replace(/"/g, '\\"');
+			value += indent + '- "' + val + '"' + "\n";
+
+		});
+
+		value = value.slice(0, -1);
+		return field_name + ": \n" + value + "\n";
 	};
 
 	/* Input */
@@ -401,8 +437,12 @@ EgrRender = (function () {
 				EgrAdd.add(field, $(this));
 			});
 
-			field.on('click', '.egr-delete', function() {
-				EgrDelete.delete(field, $(this));
+			field.on('click', '.egr-delete-apply', function() {
+				EgrDelete.deleteAction(field, $(this));
+			});
+
+			field.on('click', '.egr-delete-cancel', function() {
+				EgrDelete.deleteCancel(field, $(this));
 			});
 
 			field.on('click', '.egr-clone', function() {
@@ -413,6 +453,10 @@ EgrRender = (function () {
 				if(!$(e.target).closest('.egr-fieldset').not(this).length){
 					EgrToggleActive.toggle(field, $(this));
 				}
+			});
+
+			field.on('click', '.egr-delete', function() {
+				EgrDelete.deleteMessage(field, $(this));
 			});
 
 			$(document).on('click', function(e) {
@@ -505,6 +549,8 @@ var EgrToggleActive = (function () {
 	var fn = {};
 
 	fn.toggle = function(obj, this_obj) {
+		if(this_obj.hasClass('egr-delete-active')) return;
+		
 		obj.find('.egr-actions').hide();
 		this_obj.children('.egr-actions').css('display', 'flex');
 		EgrSort.toggle(obj, this_obj);
@@ -561,9 +607,9 @@ var EgrTrigger = (function () {
 		if ( row.find('[data-field="quickselect"]').length ) {
 			row.find('[data-field="quickselect"]').removeData('quickselect').quickselect();
 		}
-		/*if ( row.find('[data-field="list"]').length ) {
+		if ( row.find('[data-field="list"]').length ) {
 			row.find('[data-field="list"]').removeData('list').list();
-		}*/
+		}
 	};
 
 	fn.checkDuplicates = function(row) {

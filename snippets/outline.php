@@ -6,10 +6,7 @@
 			data-id="<?php echo $row_name; ?>"
 			data-fieldset-count="<?php echo count($set['fieldsets']); ?>"
 		>
-			<?php
-				$grid = (isset($outline[$row_name]['width'])) ? ' egr-grid-item egr-grid-item-' . str_replace('/', '-', $outline[$row_name]['width']) : '';
-			?>
-			<div class="egr-fieldsets<?php echo $grid; ?>">
+			<div class="egr-fieldsets<?php echo egr::grid($outline[$row_name]); ?>">
 				<?php foreach($set['fieldsets'] as $fieldset_name => $fieldset ) : ?>
 					<?php $fieldset_names[$fieldset_name] = (isset($fieldset['label'])) ? $fieldset['label'] : $fieldset_name; ?>
 
@@ -40,10 +37,7 @@
 							<?php endif; ?>
 						</div>
 
-						<?php
-						$buttons = (isset($set['buttons'])) ? $set['buttons'] : array();
-						echo egr::snippet('actions', array('buttons' => $buttons));
-						?>
+						<?php echo egr::snippet('actions', array('buttons' => egr::buttons($set))); ?>
 					</div>
 				<?php endforeach; ?>
 			</div>
