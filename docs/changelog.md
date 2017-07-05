@@ -4,6 +4,7 @@
 
 - **Feature** - Delete warning message.
 - **Feature** - Delete area preview.
+- **Feature** - Tests added. Blueprints are registered if `engineer.debug` is set to `true`.
 - **Breaking change** - The `width` option for rows is renamed `rowWidth` instead. It will make it more future proof and prevent collisions with `width` on the root of the engineer field.
 - **Breaking change** - The option `engineer.label.fallback` is removed. No good reason for a label fallback.
 - **Bug fixes** - Minor issues.
