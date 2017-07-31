@@ -28,7 +28,7 @@ You can have pretty much any field structure you want. Also see the [blueprint](
    1. [Install](docs/install.md)
    1. [Blueprint](docs/blueprint.md)
    1. [Usage](docs/usage.md)
-   1. [Templates and snippets](docs/blueprint.md)
+   1. [Templates and snippets](docs/templates-snippets.md)
 1. **More**
    - [Supported fields](docs/fields.md)
    - [Options](docs/options.md)
