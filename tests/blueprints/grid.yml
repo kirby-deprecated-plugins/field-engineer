@@ -1,0 +1,50 @@
+# width on root and sub level
+# rowWidth on root and sub level
+# buttons on root and sub level
+
+title: Engineer grid
+pages: true
+fields:
+  width:
+    type: engineer
+    width: 1/2
+    rowWidth: 1/2
+    fields:
+      text:
+        label: Text
+        type: text
+        width: 1/2
+      textarea:
+        label: Textarea
+        type: textarea
+        width: 1/2
+  engineer:
+    type: engineer
+    label: Root
+    rowWidth: 1/2
+    buttons:
+      - delete
+      - clone
+    fields:
+      text:
+        label: Text
+        type: text
+        width: 1/2
+      textarea:
+        label: Textarea
+        type: textarea
+        width: 1/2
+      engineer:
+        type: engineer
+        width: 1/2 # Fails with type engineer on a sub level
+        rowWidth: 1/2
+        buttons:
+          - delete
+          - sort
+        fields:
+          text:
+            label: Text
+            type: text
+          textarea:
+            label: Textarea
+            type: textarea

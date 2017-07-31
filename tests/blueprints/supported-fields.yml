@@ -1,0 +1,19 @@
+title: Engineer supported fields
+pages: true
+fields:
+  engineer:
+    type: engineer
+    label: Supported fields
+    fields:
+      hero:
+        label: Hero
+        type: hero
+        width: 1/3
+      quickselect:
+        label: quickselect
+        type: quickselect
+        options: files
+        width: 1/3
+      images:
+        label: Images
+        type: images

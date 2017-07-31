@@ -19,7 +19,10 @@ class Presentation {
 
 				$fieldset_name = (isset($fieldset['_fieldset'])) ? $fieldset['_fieldset'] : 'default';
 				$fieldset_data = $data['fieldsets'][$fieldset_name];
+				$labels = (isset($data['fieldsets'][$fieldset_name]['labels'])) ? $data['fieldsets'][$fieldset_name]['labels'] : array();
 				$new['sets']['set_' . $set]['name'] = $fieldset_name;
+				$new['sets']['set_' . $set]['labels'] = $labels;
+				
 				if(!empty($fieldset_data['fields'])) {
 					foreach($fieldset_data['fields'] as $field_name => $field) {
 						$data_value = (isset($fieldset[$field_name])) ? $fieldset[$field_name] : '';
@@ -31,7 +34,6 @@ class Presentation {
 						if($field_type == 'engineer') {
 							$new['sets']['set_' . $set]['fields']['id_' . $id] = $this->set($field, $data_value);
 							$new['sets']['set_' . $set]['fields']['id_' . $id]['name'] = $field_name;
-							//$new['sets']['set_' . $set]['fields']['id_' . $id]['buttons'] = (isset($field['buttons'])) ? $field['buttons'] : array();
 						} else {
 							$extra = array(
 								'value' => $data_value,
@@ -40,7 +42,6 @@ class Presentation {
 							);
 							$new['sets']['set_' . $set]['fields']['id_' . $id] = array_merge($field, $extra);
 						}
-						
 					}
 				}
 			}

@@ -1,99 +1,85 @@
 title: Engineer panel fields
 pages: true
 fields:
-  engineer_root:
+  engineer:
     type: engineer
-    label: Engineer root
-    fieldsets:
-      all:
-        label: All fields
-        fields:
-          checkbox:
-            type: checkbox
-            text: My checkbox
-            width: 1/3
-          checkboxes:
-            type: checkboxes
-            options:
-              one: One
-              two: Two
-            width: 1/3
-          date:
-            type: date
-            width: 1/3
-          datetime:
-            type: datetime
-            width: 1/3
-          email:
-            type: email
-            width: 1/3
-          headline:
-            type: headline
-          image:
-            type: image
-            width: 1/3
-          headline2:
-            label: H2
-            type: headline
-          info:
-            type: info
-            width: 1/3
-            text: >
-              Some text
-              added
-          line:
-            type: line
-            width: 1/3
-          number:
-            type: number
-            width: 1/3
-          page:
-            type: page
-            width: 1/3
-          radio:
-            type: radio
-            options:
-              one: One
-              two: Two
-            width: 1/3
-          select:
-            type: select
-            options:
-              one: One
-              two: Two
-            width: 1/3
-          tags:
-            type: tags
-            width: 1/3
-          tel:
-            type: tel
-            width: 1/3
-          text:
-            type: text
-            width: 1/3
-          textarea:
-            type: textarea
-            width: 1/3
-          time:
-            type: time
-            width: 1/3
-          toggle:
-            type: toggle
-            width: 1/3
-          url:
-            type: url
-            width: 1/3
-          user:
-            type: user
-            width: 1/3
-      set1:
-        label: Set1
-        fields:
-          fel:
-            label: Fel
-            width: 1/2
-            type: textarea
-          gas:
-            label: Gas
-            width: 1/2
-            type: text
+    label: Panel fields
+    fields:
+      checkbox:
+        type: checkbox
+        text: My checkbox
+        width: 1/3
+      checkboxes:
+        type: checkboxes
+        options:
+          one: One
+          two: Two
+        width: 1/3
+      date:
+        type: date
+        width: 1/3
+      datetime:
+        type: datetime
+        width: 1/3
+      email:
+        type: email
+        width: 1/3
+      headline:
+        type: headline
+      image:
+        type: image
+        width: 1/3
+      headline2:
+        label: H2
+        type: headline
+      info:
+        type: info
+        width: 1/3
+        text: >
+          Some text
+          added
+      line:
+        type: line
+        width: 1/3
+      number:
+        type: number
+        width: 1/3
+      page:
+        type: page
+        width: 1/3
+      radio:
+        type: radio
+        options:
+          one: One
+          two: Two
+        width: 1/3
+      select:
+        type: select
+        options:
+          one: One
+          two: Two
+        width: 1/3
+      tags:
+        type: tags
+        width: 1/3
+      tel:
+        type: tel
+        width: 1/3
+      text:
+        type: text
+        width: 1/3
+      textarea:
+        type: textarea
+        width: 1/3
+      time:
+        type: time
+        width: 1/3
+      toggle:
+        type: toggle
+        width: 1/3
+      url:
+        type: url
+        width: 1/3
+      user:
+        type: user
+        width: 1/3

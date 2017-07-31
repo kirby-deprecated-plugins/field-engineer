@@ -1,5 +1,16 @@
 # Changelog
 
+**v0.8**
+
+- **Test** - Blueprint `panel-fields.yml` that tests all supported native fields built into the Panel.
+- **Test** - Blueprint `supported-fields.yml` that tests custom made fields that are supported by Engineer.
+- **Test** - Blueprint `working-fields.yml` that tests custom made fields that should work out of the box.
+- **Test** - Blueprint `grid.yml` that tests `width`, `rowWidth` and `buttons` on multiple levels.
+- **Test** - Blueprint `nesting.yml` that tests nesting on multiple levels.
+- **Test** - Blueprint `fieldsets.yml` that tests `fields`, `fieldsets` and empty sets on multiple levels.
+- **Test** - Blueprint `options.yml` that tests field options `default`, `icon`, `readonly`, `help`, `placeholder` and `required`.
+- **Enhancement** - It's now possible to click outside a field to hide the action bar.
+
 **v0.7**
 
 - **Feature** - Delete warning message.
@@ -28,7 +39,7 @@
 - Docs - Separated [field plugins](fields.md#plugin-fields) that works "out of the box" from the "supported" ones.
 - Docs - [Troubleshooting](troubleshooting.md) steps added.
 
-**0.5**
+**v0.5**
 
 - Added requirement: PHP7+
 - Support for multi language setup
@@ -55,7 +66,7 @@
 - Fix - Headline
 - On hold - `style: table` does not work in this version
 
-**beta 0.3**
+**beta v0.3**
 
 - Fixed bug with th position
 - Fixed bug with table sort jumping
@@ -63,10 +74,10 @@
 - Fixed bug with textarea autosize after adding new item
 - Fixed bug frontend crasch. Only run plugin in the panel.
 
-**beta 0.2**
+**beta v0.2**
 
 - Lots of big changes
 
-**beta 0.1**
+**beta v0.1**
 
 - Initial release

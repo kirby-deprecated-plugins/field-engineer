@@ -9,5 +9,9 @@ var EgrToggleActive = (function () {
 		EgrSort.toggle(obj, this_obj);
 	};
 
+	fn.remove = function(obj, this_obj) {
+		obj.find('.egr-actions').hide();
+	};
+
 	return fn;
 })();

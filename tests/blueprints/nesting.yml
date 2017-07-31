@@ -1,0 +1,31 @@
+title: Engineer nesting
+pages: true
+fields:
+  engineer:
+    type: engineer
+    label: Level 0
+    fields:
+      text:
+        label: Text field
+        type: text
+      engineer:
+        label: Level 1
+        type: engineer
+        fields:
+          text:
+            label: Text field
+            type: text
+          engineer:
+            label: Level 2
+            type: engineer
+            fields:
+              text:
+                label: Text field
+                type: text
+              engineer:
+                label: Level 3
+                type: engineer
+                fields:
+                  text:
+                    label: Text field
+                    type: text

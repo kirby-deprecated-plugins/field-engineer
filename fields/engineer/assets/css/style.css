@@ -247,4 +247,41 @@
   z-index: 1;
   opacity: .2; }
 
+.egr-style-table > .egr-fieldsets {
+  border: 2px solid #ddd; }
+  .egr-style-table > .egr-fieldsets > .egr-fieldset {
+    border: none;
+    margin-bottom: 0;
+    padding-top: .5em;
+    padding-right: .5em; }
+    .egr-style-table > .egr-fieldsets > .egr-fieldset:last-child {
+      border-bottom: 0; }
+      .egr-style-table > .egr-fieldsets > .egr-fieldset:last-child > .egr-actions {
+        border-bottom: 0; }
+    .egr-style-table > .egr-fieldsets > .egr-fieldset > .egr-fields > .field {
+      padding-left: .5em;
+      margin-bottom: .5em; }
+    .egr-style-table > .egr-fieldsets > .egr-fieldset > .egr-actions {
+      width: calc(100% + .5em); }
+
+.egr-style-table.egr-odd > .egr-fieldsets > .egr-labels {
+  background: #fff; }
+
+.egr-style-table.egr-odd > .egr-fieldsets > .egr-fieldset > .egr-actions {
+  border-bottom: 1px solid #ddd; }
+
+.egr-style-table.egr-even > .egr-fieldsets > .egr-labels {
+  background: #eee; }
+
+.egr-style-table.egr-even > .egr-fieldsets > .egr-fieldset > .egr-actions {
+  border-bottom: 1px solid #ccc; }
+
+.egr-labels {
+  padding-top: 1em;
+  padding-right: 1em;
+  border-bottom: 1px solid #ddd; }
+  .egr-labels > .field {
+    margin-bottom: 0.5em;
+    padding-left: 1em !important; }
+
 /*# sourceMappingURL=style.css.map */

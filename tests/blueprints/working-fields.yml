@@ -1,0 +1,43 @@
+title: Engineer working fields
+pages: true
+fields:
+  to_structure:
+    type: structure
+    label: For select a stucture field
+    style: table
+    fields:
+      item:
+        type: text
+  engineer:
+    type: engineer
+    label: Working fields
+    fields:
+      switch:
+        label: Switch
+        type: switch
+        text:  Switch me
+        width: 1/3
+      country:
+        label: Country
+        type: country
+        width: 1/3
+      decimal:
+        label: Decimal
+        type: decimal
+        width: 1/3
+      selectastructure:
+        label: Select a structure
+        type: selectastructure
+        width: 1/3
+        structurepage: plugin-fields
+        structurefield: to_structure
+        optionkey: item
+      logic:
+        label: Logic
+        title: My logic field
+        width: 1/3
+        type: logic
+      controlledcheckboxes:
+        label: Controlled list
+        type: controlledcheckboxes
+        controller: MyPlugin::userlist

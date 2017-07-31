@@ -1,0 +1,35 @@
+# style: table
+
+title: Engineer table
+pages: true
+fields:
+  engineer:
+    type: engineer
+    style: table
+    label: Table
+    fields:
+      text:
+        label: Text
+        type: text
+        width: 1/2
+      textarea:
+        label: Textarea
+        type: textarea
+        width: 1/2
+  nested:
+    type: engineer
+    label: Root
+    fields:
+      engineer:
+        label: Engineer
+        type: engineer
+        style: table
+        fields:
+          text:
+            label: Text
+            type: text
+            width: 1/2
+          textarea:
+            label: Textarea
+            type: textarea
+            width: 1/2

@@ -1,0 +1,65 @@
+# fields on root and sub level
+# fieldsets on root and sub level
+# single fieldset on sub level (no dropdown needed for a single fieldset)
+# empty fields on root and sub level
+# empty fieldsets on root and sub level
+
+title: Engineer fieldsets
+pages: true
+fields:
+  single:
+    type: engineer
+    label: Single fields
+    fields:
+      text:
+        label: Text
+        type: text
+      engineer_fields:
+        label: Fields
+        type: engineer
+        fields:
+          text:
+            label: Text
+            type: text
+          textarea:
+            label: Textarea
+            type: textarea
+          engineer_fieldset:
+            label: Single fieldset
+            type: engineer
+            fieldsets:
+              labled:
+                label: Labled
+                fields:
+                  text:
+                    label: Text
+                    type: text
+  multiple:
+    type: engineer
+    label: Fieldsets
+    fieldsets:
+      labled:
+        label: Labled
+        fields:
+          text:
+            label: Text
+            type: text
+          engineer:
+            type: engineer
+            fieldsets:
+              first:
+                label: First
+                fields:
+                  text:
+                    label: Text
+                    type: text
+              second:
+                fields:
+                  textarea:
+                    label: Textarea
+                    type: textarea
+      unlabled:
+        fields:
+          text:
+            label: Text
+            type: text

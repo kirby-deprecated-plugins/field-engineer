@@ -61,22 +61,21 @@ Many fields will work out of the box with Engineer. Here are a few of the most p
 
 ### Works out of the box
   
-| Plugin field                                                            | Tested
-| ----------------------------------------------------------------------- | -----------
-| [Controlled list](https://github.com/rasteiner/controlledlist)          | Yes
-| [Kirby date field](https://github.com/iksi/KirbyDateField)              | Yes
-| [Kirby country field](https://github.com/iksi/KirbyCountryField)        | Yes
-| [Kirby decimal field](https://github.com/iksi/KirbyDecimalField)        | Yes
-| [Kirby Logic Field](https://github.com/jenstornell/kirby-logic-field)   | Yes
-| [Kirby time field](https://github.com/iksi/KirbyTimeField)              | Yes
-| [Select a structure](https://github.com/CalebGrove/select-a-structure)  | Yes
-| [Switch field](https://github.com/distantnative/field-switch)           | Yes
+| Plugin field                                                            | Tested | Has blueprint test
+| ----------------------------------------------------------------------- | ---------------------------
+| [Controlled list](https://github.com/rasteiner/controlledlist)          | Yes    | Yes
+| [Kirby date field](https://github.com/iksi/KirbyDateField)              | Yes    | -
+| [Kirby country field](https://github.com/iksi/KirbyCountryField)        | Yes    | Tes
+| [Kirby decimal field](https://github.com/iksi/KirbyDecimalField)        | Yes    | Yes
+| [Kirby Logic Field](https://github.com/jenstornell/kirby-logic-field)   | Yes    | Yes
+| [Kirby time field](https://github.com/iksi/KirbyTimeField)              | Yes    | -
+| [Select a structure](https://github.com/CalebGrove/select-a-structure)  | Yes    | Yes
+| [Switch field](https://github.com/distantnative/field-switch)           | Yes    | Yes
 
 ### Supported by Engineer
 
-| Plugin field                                                            | Supported
-| ----------------------------------------------------------------------- | -----------
-| [Kirby Hero Field](https://github.com/jenstornell/kirby-hero-field)     | Yes
-| [Kirby Images](https://github.com/medienbaecker/kirby-images)           | Yes
-| [Kirby list field](https://github.com/TimOetting/kirby-list-field)      | Yes
-| [Kirby Quickselect](https://github.com/medienbaecker/kirby-quickselect) | Yes
+| Plugin field                                                            | Supported | Has blueprint test
+| ----------------------------------------------------------------------- | ------------------------------
+| [Kirby Hero Field](https://github.com/jenstornell/kirby-hero-field)     | Yes       | Yes
+| [Kirby Images](https://github.com/medienbaecker/kirby-images)           | Yes       | Yes
+| [Kirby Quickselect](https://github.com/medienbaecker/kirby-quickselect) | Yes       | Yes

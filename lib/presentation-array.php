@@ -12,10 +12,28 @@ class PresentationArray {
 	function prepare($field, $level = -1) {
 		$out = $this->cleanup($field);
 		$out = $this->level($out, $level);
-		$out = $this->default($out, $field);
+		$out = $this->default($out, $field);		
 		$out = $this->fieldsets($out, $field);
+		$out = $this->styleTable($out);
 		$out = $this->loop($out);
 
+		return $out;
+	}
+
+	function styleTable($out) {
+		if(isset($out['style']) && $out['style'] == 'table') {
+			if(!empty($out['fieldsets'])) {
+				foreach($out['fieldsets'] as $fieldset_key => $fieldset) {
+					foreach($fieldset['fields'] as $field_key => $field) {
+						if(isset($field['label'])) {
+							$out['fieldsets'][$fieldset_key]['labels'][$field_key]['label'] = $field['label'];
+							$out['fieldsets'][$fieldset_key]['labels'][$field_key]['width'] = $field['width'];
+						}
+						unset($out['fieldsets'][$fieldset_key]['fields'][$field_key]['label']);
+					}
+				}
+			}
+		}
 		return $out;
 	}
 

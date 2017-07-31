@@ -1,0 +1,63 @@
+$lp: 1em;
+
+.egr-style-table {
+	> .egr-fieldsets {
+		border: 2px solid #ddd;
+		> .egr-fieldset {
+			border: none;
+			margin-bottom: 0;
+			padding-top: .5em;
+			padding-right: .5em;
+
+			&:last-child {
+				border-bottom: 0;
+
+				> .egr-actions {
+					border-bottom: 0;
+				}
+			}
+
+			> .egr-fields {
+				> .field {
+					padding-left: .5em;
+					margin-bottom: .5em;
+				}
+			}
+			> .egr-actions {
+				width: calc(100% + .5em);
+			}
+		}
+	}
+
+	&.egr-odd {
+		> .egr-fieldsets {
+			> .egr-labels {
+				background: #fff;
+			}
+			> .egr-fieldset > .egr-actions {
+				border-bottom: 1px solid #ddd;
+			}
+		}
+	}
+	&.egr-even {
+		> .egr-fieldsets {
+			> .egr-labels {
+				background: #eee;
+			}
+			> .egr-fieldset > .egr-actions {
+				border-bottom: 1px solid #ccc;
+			}
+		}
+	}
+}
+
+.egr-labels {
+	padding-top: $lp;
+	padding-right: $lp;
+	border-bottom: 1px solid #ddd;
+
+	> .field {
+		margin-bottom: $lp / 2;
+		padding-left: $lp !important;
+	}
+}

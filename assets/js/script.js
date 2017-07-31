@@ -39,8 +39,11 @@
 			});
 
 			$(document).on('click', function(e) {
-				if (!$(e.target).closest('.egr-add-button').not(this).length) {
+				if(!$(e.target).closest('.egr-add-button').not(this).length) {
 					$(document).find('.egr-dropdown-active').removeClass('egr-dropdown-active');
+				}
+				if(!$(e.target).closest('.egr-fieldset').not(this).length) {
+					EgrToggleActive.remove(field, $(this));
 				}
 			});
 

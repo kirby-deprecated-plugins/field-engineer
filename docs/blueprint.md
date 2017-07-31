@@ -131,6 +131,16 @@ It works very similar to the [structure field](https://getkirby.com/docs/cheatsh
 
 Instead of fields you can use fieldsets. Then you can choose which set to use. To learn it, see the advanced example.
 
+**style**
+
+This option is similar to the structure field, but with Engineer the only style that can be set is `style: table`, or non at all.
+
+Keep these things in mind:
+
+- The sub field option `width` is required, leaving you in control.
+- Only use 1 `fieldset` or use `fields`. Else you will get the wrong table headings.
+- It's generates a table, so let the sub fields be on the same row.
+
 **buttons**
 
 If you don't use this option it will fallback to the following buttons:

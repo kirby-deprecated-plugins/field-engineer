@@ -460,8 +460,11 @@ EgrRender = (function () {
 			});
 
 			$(document).on('click', function(e) {
-				if (!$(e.target).closest('.egr-add-button').not(this).length) {
+				if(!$(e.target).closest('.egr-add-button').not(this).length) {
 					$(document).find('.egr-dropdown-active').removeClass('egr-dropdown-active');
+				}
+				if(!$(e.target).closest('.egr-fieldset').not(this).length) {
+					EgrToggleActive.remove(field, $(this));
 				}
 			});
 
@@ -554,6 +557,10 @@ var EgrToggleActive = (function () {
 		obj.find('.egr-actions').hide();
 		this_obj.children('.egr-actions').css('display', 'flex');
 		EgrSort.toggle(obj, this_obj);
+	};
+
+	fn.remove = function(obj, this_obj) {
+		obj.find('.egr-actions').hide();
 	};
 
 	return fn;

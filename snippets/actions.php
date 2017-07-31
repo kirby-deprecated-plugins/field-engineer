@@ -21,8 +21,10 @@ $button_array = array(
 
 <div class="egr-actions">
 	<?php foreach($buttons as $key) : ?>
-		<div class="egr-<?php echo $key; ?>">
-			<i class="icon fa fa-<?php echo $button_array[$key]['icon']; ?>"></i>
-		</div>
+		<?php if(isset($button_array[$key]['icon'])) : ?>
+			<div class="egr-<?php echo $key; ?>">
+				<i class="icon fa fa-<?php echo $button_array[$key]['icon']; ?>"></i>
+			</div>
+		<?php endif; ?>
 	<?php endforeach; ?>
 </div>

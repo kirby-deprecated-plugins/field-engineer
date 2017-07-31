@@ -1,0 +1,46 @@
+# All option tests are on both root level and sub level
+# label, type, default, icon, readonly, help, placeholder, required
+
+title: Engineer options
+pages: true
+fields:
+  engineer:
+    type: engineer
+    label: Single fields
+    fields:
+      text:
+        label: Text without options
+        type: text
+      text_options1:
+        label: Text with options 1
+        type: text
+        default: Default value
+        icon: info
+        readonly: true
+        help: default, icon, help
+      text_options2:
+        label: Text with options 2
+        type: text
+        placeholder: A placeholder
+        required: true
+        help: placeholder, required, help
+      engineer:
+        label: Fields
+        type: engineer
+        fields:
+          text:
+            label: Text without options
+            type: text
+          text_options1:
+            label: Text with options 1
+            type: text
+            default: Default value
+            icon: info
+            readonly: true
+            help: default, icon, help
+          text_options2:
+            label: Text with options 2
+            type: text
+            placeholder: A placeholder
+            required: true
+            help: placeholder, required, help

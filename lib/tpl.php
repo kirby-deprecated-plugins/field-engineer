@@ -32,4 +32,12 @@ class egr {
 		}
 		return $count;
 	}
+
+	public static function style($set) {
+		$style = '';
+		if(isset($set['style'])) {
+			$style = ' egr-style-' . $set['style'];
+		}
+		return $style;
+	}
 }
