@@ -28,6 +28,10 @@ class Outline {
 							if($field['type'] == 'engineer' && isset($field['width'])) {
 								$out[$name . ',' . $field_name]['width'] = $field['width'];
 							}
+
+							if(isset($field['style'])) {
+								$out[$name . ',' . $field_name]['_style'] = $field['style'];
+							}
 						}
 					}
 				}

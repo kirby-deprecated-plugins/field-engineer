@@ -1,5 +1,13 @@
 # Changelog
 
+**v0.9**
+
+- **Feature** - `style: table` reimplemented.
+- **Enhancement** - Removed some html classes that was not needed for table labels.
+- **Bug fix** - Fixed error if table fieldset could not be found.
+- **Bug fix** - Engineer blueprints are now only registered if `engineer.debug` is on.
+- **Bug fix** - `style: table` label issue fixed. Thanks [Dreytac](https://github.com/Dreytac).
+
 **v0.8**
 
 - **Test** - Blueprint `panel-fields.yml` that tests all supported native fields built into the Panel.

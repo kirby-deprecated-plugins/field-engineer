@@ -1,7 +1,7 @@
 <?php if(!empty($outline)) : ?>
 	<?php foreach($outline as $row_name => $set ) : ?>
 		<?php $fieldset_names = array(); ?>
-		<div class="egr-row egr-row-blueprint <?php echo egr::oddEven($set['_level'] + 1); ?>"
+		<div class="egr-row egr-row-blueprint <?php echo egr::oddEven($set['_level'] + 1); ?> egr-style-<?php echo $set['_style'] ?? 'items'; ?>"
 			data-field-name="<?php echo $row_name; ?>"
 			data-id="<?php echo $row_name; ?>"
 			data-fieldset-count="<?php echo count($set['fieldsets']); ?>"

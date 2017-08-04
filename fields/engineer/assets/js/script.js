@@ -236,9 +236,10 @@ EgrRender = (function () {
 					var fieldset = $(this);
 					var subfields = fieldset.children('.egr-fields').children();
 
-					
-					out += tab + "-\n";
-					out += fn.setFieldsetName(tab, field, fieldset);
+					if(fieldset.attr('data-fieldset-name') != undefined) {
+						out += tab + "-\n";
+						out += fn.setFieldsetName(tab, field, fieldset);
+					}
 					out = fn.renderLoop(subfields, out, false);
 				});
 			} else {

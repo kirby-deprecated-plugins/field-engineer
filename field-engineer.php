@@ -7,8 +7,7 @@ if(class_exists('Panel') && site()->user()) {
 	require_once __DIR__ . DS . 'lib' . DS . 'presentation-array.php';
 	require_once __DIR__ . DS . 'lib' . DS . 'outline.php';
 
-	if(c::get('engineer.debug', true)) {
-
+	if(c::get('engineer.debug', false)) {
 		c::set('plugin.logic.field', function($field, $page) {
 			return '<p><strong>Field name:</strong> ' . $field->name() . '<br><strong>Panel page</strong>: ' . $page->title() . '</p>';
 		});

@@ -8,14 +8,14 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var gutil = require('gulp-util');
-var sourcemaps = require('gulp-sourcemaps');
+//var sourcemaps = require('gulp-sourcemaps');
 
 // css
 gulp.task('css', function() {
 	gulp.src('assets/scss/style.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(sourcemaps.write(''))
+		//.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('fields/engineer/assets/css'))
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))

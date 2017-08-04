@@ -99,6 +99,12 @@ It's optional but you can give the Engineer field a label if you like.
 
 The `type` option needs to be set to `engineer`.
 
+**style**
+
+Set `style: table` to use a tabular layout. It does not work exactly as the structure field. With this field it's required to set a `width` of every sub field. Look at the built in `table.yml` blueprint to get inspiration.
+
+For a normal layout, just skip this option.
+
 **width**
 
 *Changed behavior from v0.6 to v0.7*
