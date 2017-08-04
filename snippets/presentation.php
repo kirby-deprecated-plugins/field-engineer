@@ -15,13 +15,8 @@
 			<?php if(isset($first['labels']) && !empty($first['labels'])) : ?>
 				<div class="egr-labels"><?php
 					foreach($first['labels'] as $field_key => $field) :
-<<<<<<< HEAD
 						?><div class="field egr-field field-grid-item field-grid-item-<?php echo (isset($field['width']) ? str_replace('/', '-', $field['width']) : '1-2') ?>">
 							<label class="label"><?php echo $field['label']; ?></label>
-=======
-						?><div data-prefix="_i3_egr__" data-field-name="text" class="field egr-field field-grid-item field-grid-item-<?php echo (isset($field['width']) ? str_replace('/', '-', $field['width']) : '1-2') ?> field-name-text_i3_egr__">
-							<label class="label" data-for="form-field-text_i3_egr__"><?php echo $field['label']; ?></label>
->>>>>>> 423dca03eca41edad66dee928f252531c6a53ab1
 						</div><?php endforeach;
 				?>
 				</div>
