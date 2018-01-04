@@ -34,6 +34,6 @@ You will not get a license code for this plugin, at least not with this version.
 
 Buying licenses is a good way to support this project.
 
-[![Pay now](https://www.paypalobjects.com/en_US/SE/i/btn/btn_paynowCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W68WGMJVFLTFU)
+***The purchase button is temporary disabled***
 
 **Price:** 50 EUR (on each project/domain)
