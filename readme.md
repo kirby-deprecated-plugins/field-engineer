@@ -1,8 +1,6 @@
 # Kirby Engineer Field
 
-[![Version 0.9](https://img.shields.io/badge/version-0.9-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) [![Commercial license](https://img.shields.io/badge/license-commercial-red.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/license.md) [![Commercial license](https://img.shields.io/badge/price-€50-yellow.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/license.md)
-
-***Note:*** *This is a commercial plugin. Read more about [how to purchase](#purchase).*
+[![Version 0.9](https://img.shields.io/badge/version-0.9-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) ![MIT](https://img.shields.io/badge/license-commercial-red.svg)
 
 A [Kirby CMS](https://getkirby.com) field for complex field structures.
 
@@ -47,14 +45,6 @@ You can have pretty much any field structure you want. Also see the [blueprint](
 ## Disclaimer
 
 This plugin is provided "as is" with no guarantee. Use it at your own risk and always test it yourself before using it in a production environment. If you find any issues, please [create a new issue](https://github.com/jenstornell/field-engineer/issues/new).
-
-## Purchase
-
-Be sure to try before you buy. Refunds are not supported. Read more in the [license agreement](docs/license.md).
-
-***The purchase button is temporary disabled***
-
-**Price:** 50 EUR (on each project/domain)
 
 ## Credits
 
