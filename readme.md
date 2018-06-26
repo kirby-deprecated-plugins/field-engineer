@@ -4,6 +4,10 @@
 
 **UPDATE:** Because of Kirby 3 that will be released soon, this plugin is deprecated and is no longer supported. The license has been changed to MIT so you can use it any way you want.
 
+**Donations:** If you like this plugin, I would be very thankful for any donation: https://www.paypal.me/DevoneraAB
+
+---
+
 A [Kirby CMS](https://getkirby.com) field for complex field structures.
 
 **Supports:**
