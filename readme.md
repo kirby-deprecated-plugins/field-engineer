@@ -1,6 +1,6 @@
 # Kirby Engineer Field
 
-[![Version 0.9](https://img.shields.io/badge/version-0.9-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) ![MIT](https://img.shields.io/badge/license-commercial-red.svg)
+[![Version 0.9](https://img.shields.io/badge/version-0.9-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) ![MIT](https://img.shields.io/badge/license-mit-green.svg)
 
 A [Kirby CMS](https://getkirby.com) field for complex field structures.
 
