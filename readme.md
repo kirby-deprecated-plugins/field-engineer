@@ -1,6 +1,8 @@
 # Kirby Engineer Field
 
-[![Version 0.9](https://img.shields.io/badge/version-0.9-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) ![MIT](https://img.shields.io/badge/license-mit-green.svg)
+[![Version 0.9](https://img.shields.io/badge/version-0.9-blue.svg)](https://github.com/jenstornell/field-engineer/blob/master/docs/changelog.md) ![MIT](https://img.shields.io/badge/license-MIT-green.svg)
+
+**UPDATE:** Because of Kirby 3 that will be released soon, this plugin is deprecated and is no longer supported. The license has been changed to MIT so you can use it any way you want.
 
 A [Kirby CMS](https://getkirby.com) field for complex field structures.
 
@@ -45,6 +47,10 @@ You can have pretty much any field structure you want. Also see the [blueprint](
 ## Disclaimer
 
 This plugin is provided "as is" with no guarantee. Use it at your own risk and always test it yourself before using it in a production environment. If you find any issues, please [create a new issue](https://github.com/jenstornell/field-engineer/issues/new).
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
 
 ## Credits
 
